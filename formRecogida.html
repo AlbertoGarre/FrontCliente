@@ -52,175 +52,245 @@
             </div>
         </nav>
         <!-- Contenido de la página-->
-        <div id="content" class="m-0 p-4 ">
+        <div id="content" class="container m-0 p-4 ">
+            <h2 class="w-auto text-center py-5 mt-3">Solicita Recogida</h2>
+            <div class="row">
 
-            <form>
-                <h2 class="w-auto text-center py-5 mt-3">Solicitar Recogida</h2>
-                <h3>Datos generales</h3>
-                <!--Datos generales-->
-                <div class="form-row m-0 p-0">
-                    <div class="form-group m-0 p-0 mr-2">
-                        <label for="inputEmail">E-mail</label>
-                        <input type="text" class="form-control m-0 p-0" id="inputEmail" placeholder="ejemplo@correo.com">
-                    </div>
-                    <div class="form-group  m-0 p-0 mr-2">
-                        <label for="inputSolicitante">Solicitante(remitente)</label>
-                        <input type="text" class="form-control m-0 p-0" id="inputSolicitante" placeholder="Solicitante">
-                    </div>
-                    <div class="form-group m-0 p-0 mr-2">
-                        <label for="inputTelefono">Teléfono</label>
-                        <input type="text" class="form-control m-0 p-0" id="inputTelefono" placeholder="968 82 60 47">
-                    </div>
+                <div class="col-md-4 order-md-2 mb-4 mt-md-5">
+                    
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Your cart</span>
+                        <span class="badge badge-secondary badge-pill">3</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Product name</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Second product</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Third item</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                                <h6 class="my-0">Promo code</h6>
+                                <small>EXAMPLECODE</small>
+                            </div>
+                            <span class="text-success">-$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total (USD)</span>
+                            <strong>$20</strong>
+                        </li>
+                    </ul>
+
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Promo code">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-secondary">Redeem</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+
+
+
                 </div>
 
-                <div class="form-row m-0 p-0 mt-2">
-                    <div class="form-group col-md-2 m-0 p-0 >
-                        <label for="inputNIF">NIF</label>
-                        <input type="text" class="form-control m-0 p-0" id="inputNIF" placeholder="48000000Z">
-                    </div>
+                <div class="col-md-8 order-md-1">
+                    <form>
+                        
+                        <h3>Datos generales</h3>
+                        <!--Datos generales-->
+                        <div class="form-row m-0 p-0">
+                            <div class="form-group m-0 p-0 mr-2">
+                                <label for="inputEmail">E-mail</label>
+                                <input type="text" class="form-control m-0 p-0" id="inputEmail"
+                                    placeholder="ejemplo@correo.com">
+                            </div>
+                            <div class="form-group  m-0 p-0 mr-2">
+                                <label for="inputSolicitante">Solicitante(remitente)</label>
+                                <input type="text" class="form-control m-0 p-0" id="inputSolicitante"
+                                    placeholder="Solicitante">
+                            </div>
+                            <div class="form-group m-0 p-0 mr-2">
+                                <label for="inputTelefono">Teléfono</label>
+                                <input type="text" class="form-control m-0 p-0" id="inputTelefono"
+                                    placeholder="968 82 60 47">
+                            </div>
+                        </div>
+
+                        <div class="form-row m-0 p-0 mt-2">
+                            <div class="form-group col-md-2 m-0 p-0 >
+                                <label for=" inputNIF">NIF</label>
+                                <input type="text" class="form-control m-0 p-0" id="inputNIF" placeholder="48000000Z">
+                            </div>
+                        </div>
+
+                        <br><br>
+
+                        <h3>Datos de recogida</h3>
+
+                        <div class="form-row m-0 p-0">
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputState">Fecha de recogida</label>
+                                <input type="date" id="inputState" class="form-control m-0 p-0">
+                                </input>
+                            </div>
+                            <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
+                                <label for="inputCP"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="De 10:00 h">
+                            </div>
+                            <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
+                                <label for="inputCP"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="a 15:00 h">
+                            </div>
+                            <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
+                                <label for="inputCP"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="y de 17:00 h">
+                            </div>
+                            <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
+                                <label for="inputCP"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="a 19:00 h">
+                            </div>
+                        </div>
+
+                        <div class="form-row m-0 p-0">
+                            <div class="form-group m-0 p-0 mr-2">
+                                <label for="inputEmail"></label>
+                                <Select type="text" class="form-control m-0 p-0" id="inputEmail" placeholder="España">
+                                    <option value="Esp">España</option>
+                                    <option value="Por">Portugal</option>
+                                    <option value="And">Andorra</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputCP"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="30401">
+                            </div>
+
+
+                            <div class="form-group m-0 p-0 mr-2">
+                                <label for="inputPoblación"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputPoblación"
+                                    placeholder="Población">
+                            </div>
+                        </div>
+
+                        <!-- Dirección: nombre, via, número, piso-->
+                        <div class="form-group col-md-6 m-0 p-0">
+                            <label for="inputDireccion"></label>
+                            <input type="text" class="form-control m-0 p-0" id="inputCP"
+                                placeholder="Dirección: nombre, via, número, piso">
+                        </div>
+                        <!-- Empresa/Persona de recogida-->
+                        <div class="form-row m-0 p-0 ">
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputAtencionRecogida"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputAtencionRecogida"
+                                    placeholder="Empresa/Persona de recogida">
+                            </div>
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputTelefonoRecogida"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputTelefonoRecogida"
+                                    placeholder="Teléfono">
+                            </div>
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputNombreAtencionRecogida"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputNombreAtencionRecogida"
+                                    placeholder="Persona de contacto">
+                            </div>
+                        </div>
+                        <!--Observaciones de recogida-->
+                        <div class="form-group col-md-6 m-0 p-0">
+                            <label for="inputObservacionesRecogida"></label>
+                            <input type="text" class="form-control m-0 p-0" id="inputObservacionesRecogida"
+                                placeholder="Observaciones de la recogida">
+                        </div>
+
+                        <a href="######">Limpiar campos</a>
+                        <br>
+                        <br><br>
+
+
+                        <h3>Datos de Entrega</h3>
+
+                        <div class="form-row m-0 p-0">
+                            <div class="form-group m-0 p-0 mr-2">
+                                <label for="inputEmail"></label>
+                                <Select type="text" class="form-control m-0 p-0" id="inputEmail" placeholder="España">
+                                    <option value="Esp">España</option>
+                                    <option value="Por">Portugal</option>
+                                    <option value="And">Andorra</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputCP"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="30401">
+                            </div>
+
+
+                            <div class="form-group m-0 p-0 mr-2">
+                                <label for="inputPoblación"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputPoblación"
+                                    placeholder="Población">
+                            </div>
+                        </div>
+
+                        <!-- Dirección: nombre, via, número, piso-->
+                        <div class="form-group col-md-6 m-0 p-0">
+                            <label for="inputDireccion"></label>
+                            <input type="text" class="form-control m-0 p-0" id="inputCP"
+                                placeholder="Dirección: nombre, via, número, piso">
+                        </div>
+                        <!-- Destinatario-->
+                        <div class="form-row m-0 p-0">
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputDestinatario"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputDestinatario"
+                                    placeholder="Destinatario">
+                            </div>
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputTelefonoEntrega"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputTelefonoEntrega"
+                                    placeholder="Teléfono">
+                            </div>
+                            <div class="form-group col-md-2 m-0 p-0 mr-2">
+                                <label for="inputNombreAtencionEntrega"></label>
+                                <input type="text" class="form-control m-0 p-0" id="inputNombreAtencionEntrega"
+                                    placeholder="A la atención de ">
+                            </div>
+                        </div>
+                        <!--Observaciones de recogida-->
+                        <div class="form-group col-md-6 m-0 p-0">
+                            <label for="inputObservacionesEntrega"></label>
+                            <input type="text" class="form-control m-0 p-0" id="inputObservacionesEntrega"
+                                placeholder="Observaciones de la entrega">
+                        </div>
+
+                        <a href="######">Limpiar campos</a>
+
+                    </form>
                 </div>
-
-                <br><br>
-
-                <h3>Datos de recogida</h3>
-
-                <div class="form-row m-0 p-0">
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputState">Fecha de recogida</label>
-                        <input type="date" id="inputState" class="form-control m-0 p-0">
-                        </input>
-                    </div>
-                    <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
-                        <label for="inputCP"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="De 10:00 h">
-                    </div>
-                    <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
-                        <label for="inputCP"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="a 15:00 h">
-                    </div>
-                    <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
-                        <label for="inputCP"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="y de 17:00 h">
-                    </div>
-                    <div class="form-group col-md-1 m-0 p-0 mt-2 mr-2">
-                        <label for="inputCP"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="a 19:00 h">
-                    </div>
-                </div>
-
-                <div class="form-row m-0 p-0">
-                    <div class="form-group m-0 p-0 mr-2">
-                        <label for="inputEmail"></label>
-                        <Select type="text" class="form-control m-0 p-0" id="inputEmail" placeholder="España">
-                            <option value="Esp">España</option>
-                            <option value="Por">Portugal</option>
-                            <option value="And">Andorra</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputCP"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="30401">
-                    </div>
-
-
-                    <div class="form-group m-0 p-0 mr-2">
-                        <label for="inputPoblación"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputPoblación" placeholder="Población">
-                    </div>
-                </div>
-
-                <!-- Dirección: nombre, via, número, piso-->
-                <div class="form-group col-md-6 m-0 p-0">
-                    <label for="inputDireccion"></label>
-                    <input type="text" class="form-control m-0 p-0" id="inputCP"
-                        placeholder="Dirección: nombre, via, número, piso">
-                </div>
-                <!-- Empresa/Persona de recogida-->
-                <div class="form-row m-0 p-0 ">
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputAtencionRecogida"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputAtencionRecogida"
-                            placeholder="Empresa/Persona de recogida">
-                    </div>
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputTelefonoRecogida"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputTelefonoRecogida" placeholder="Teléfono">
-                    </div>
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputNombreAtencionRecogida"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputNombreAtencionRecogida"
-                            placeholder="Persona de contacto">
-                    </div>
-                </div>
-                <!--Observaciones de recogida-->
-                <div class="form-group col-md-6 m-0 p-0">
-                    <label for="inputObservacionesRecogida"></label>
-                    <input type="text" class="form-control m-0 p-0" id="inputObservacionesRecogida"
-                        placeholder="Observaciones de la recogida">
-                </div>
-
-                <a href="######">Limpiar campos</a>
-                <br>
-                <br><br>
-
-
-                <h3>Datos de Entrega</h3>
-
-                <div class="form-row m-0 p-0">
-                    <div class="form-group m-0 p-0 mr-2">
-                        <label for="inputEmail"></label>
-                        <Select type="text" class="form-control m-0 p-0" id="inputEmail" placeholder="España">
-                            <option value="Esp">España</option>
-                            <option value="Por">Portugal</option>
-                            <option value="And">Andorra</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputCP"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputCP" placeholder="30401">
-                    </div>
-
-
-                    <div class="form-group m-0 p-0 mr-2">
-                        <label for="inputPoblación"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputPoblación" placeholder="Población">
-                    </div>
-                </div>
-
-                <!-- Dirección: nombre, via, número, piso-->
-                <div class="form-group col-md-6 m-0 p-0">
-                    <label for="inputDireccion"></label>
-                    <input type="text" class="form-control m-0 p-0" id="inputCP"
-                        placeholder="Dirección: nombre, via, número, piso">
-                </div>
-                <!-- Destinatario-->
-                <div class="form-row m-0 p-0">
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputDestinatario"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputDestinatario" placeholder="Destinatario">
-                    </div>
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputTelefonoEntrega"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputTelefonoEntrega" placeholder="Teléfono">
-                    </div>
-                    <div class="form-group col-md-2 m-0 p-0 mr-2">
-                        <label for="inputNombreAtencionEntrega"></label>
-                        <input type="text" class="form-control m-0 p-0" id="inputNombreAtencionEntrega"
-                            placeholder="A la atención de ">
-                    </div>
-                </div>
-                <!--Observaciones de recogida-->
-                <div class="form-group col-md-6 m-0 p-0">
-                    <label for="inputObservacionesEntrega"></label>
-                    <input type="text" class="form-control m-0 p-0" id="inputObservacionesEntrega"
-                        placeholder="Observaciones de la entrega">
-                </div>
-
-                <a href="######">Limpiar campos</a>
-
-            </form>
+            </div>
             <div class="form-group m-0 p-0 pl-2 pt-4 pb-5">
                 <div class="form-check m-0 p-0">
                     <input class="form-check-input m-0 p-0 mt-1" type="checkbox" id="gridCheck">
