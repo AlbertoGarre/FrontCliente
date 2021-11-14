@@ -21,13 +21,9 @@
     <div id="root">
         <!-- Barra de Navegación-->
         <nav id="header" class="cristal navbar navbar-expand-sm text-dark fixed-top navbar-light">
-            <a class="navbar-brand text-success" href="#"><i class="fab fa-contao display-4"></i></a>
-
-            <div class="nav-item">
-                <a class="nav-link bg-transparent text-success border-bottom border-success pb-2" href="#">Enviar</a>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03">
+            <a class="navbar-brand text-success" href="#"><i class="fab fa-contao"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+                aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -36,7 +32,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Seguimiento <span class="sr-only">(current)</span></a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link bg-danger text-white" href="#">Enviar</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#" >Soluciones logísticas</a>
                     </li>
@@ -56,115 +54,87 @@
                     Registro
                 </a>
             </div>
-
         </nav>
 
 
         <!-- Contenido de la página-->
         <div id="content" class=" m-0 p-4"  style="width: 100%">
 
-            <!-- foto de presentación-->
-            <!--<h2 class="w-auto text-center py-5 mt-3">Tu servicio de paquetería</h2>-->
-            <!-- <div class="bg"></div>
-
-            
-            -->
-<br>
-<br>
-            
-            <div class="center imagenDeFondo" style="width: 100%">
-                
-                <div class="d-flex justify-content-center ">
-                    <div class="espaciado">
-                        <div class="intro">
-                            <h2 class="text-center pb-3">Siga su envio</h2>
-                        </div>
-                        <form class="form-inline " method="post">
-                            <div class="form-group mr-2 "><input class="form-control cristal" type="text" name="inputNumSeguimiento" placeholder=" Número de seguimiento "></div>
-                            <div class="form-group "><button class="btn btn-primary " type="submit">Seguir envío </button></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<!-- SLIDER KILOS
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div><!-- fin SLIDER KILOS
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <p style="color:grey" class="subtitle">Nuestros servicios</p>
-            <h2 style="color:grey" class="mb-5">SIEMPRE LLEGAMOS A TIEMPO</h2>
+<div class="col-lg-3 col-sm-6 mb-4">
+    <div class="card border-0 shadow rounded-xs pt-5">
+        <div class="card-body"> <i class="fa fa-users icon-lg icon-yellow icon-bg-yellow icon-bg-circle mb-3"></i>
+            <h4 class="mt-4 mb-3">Su precio final es: </h4>
+            <p>para un peso de tanto y una longitud max de ... </p>
         </div>
-        <div class="col-lg-3 col-sm-6 mb-4">
-            <div class="card border-0 shadow ">
-                <div class="card-body"> <i  class="fas fa-cube h1 display-4 text-primary  mb-3"></i>
-                    <h4 class="mt-4 mb-3">Calidad con total entrega</h4>
-                    <p>CONTOSOX es una compañía líder en el segmento de la mensajería exprés en España, Andorra y Portugal. </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 mb-4">
-            <div class="card border-0 shadow ">
-                <div class="card-body"> <i class="fa fa-users h1 display-4 text-warning   mb-3"></i>
-                    <h4 class="mt-4 mb-3">Nuestro objetivo: tu satisfacción</h4>
-                    <p>Nuestro objetivo es desarrollar servicios que cumplan con las expectativas de nuestros clientes. </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 mb-4">
-            <div class="card border-0 shadow ">
-                <div class="card-body"> <i class="fas fa-shuttle-van h1 display-4 text-danger  mb-3"></i>
-                    <h4 class="mt-4 mb-3">Más que un transporte</h4>
-                    <p>Ofrecemos una amplia gama de servicios nacionales, internacionales y de valor añadido.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 mb-4">
-            <div class="card border-0 shadow ">
-                <div class="card-body"> <i class="fa fa-search-plus h1 display-4 text-success  mb-3"></i>
-                    <h4 class="mt-4 mb-3">Más información</h4>
-                    <p>Acerquese a nuestras oficinas a solicitar más información o bien consultenos a través de email</p>
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
+</div>-->
+
+<!-- Tarjetas de tarifas-->
 
 
-  <!--          
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Tarifas</h1>
+    <p class="lead">Ofrecemos los mejores precios con las condiciones que mejor se adaptan a ti. Queremos llegar donde los demás no llegan y para eso te ofrecemos más opciones de personalización.</p>
+  </div>
+
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Económica</h4>
         </div>
-
-        <br><br><br>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">5€ <small class="text-muted">/ envío</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Hasta 1 kg de peso</li>
+            <li>Volumen inferior a 30x20x10 cm</li>
+            <li>Entrega antes de 48 horas</li>
+            <li>El mejor servicio</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Contrata ahora</button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Hogar</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">15€ <small class="text-muted">/ envío</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Hasta 7 kg de peso</li>
+            <li>Volumen inferior a 50x50x50 cm</li>
+            <li>Entrega antes de 48 horas</li>
+            <li>El mejor servicio</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Contrata ahora</button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Profesional</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">50€ <small class="text-muted">/ envío</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Hasta 25 kg de peso</li>
+            <li>Volumen transportable por un operario</li>
+            <li>Entrega antes de 48 horas</li>
+            <li>El mejor servicio</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Contrata ahora</button>
+        </div>
+      </div>
     </div>
--->
+    <!-- FIN Tarjetas de tarifas-->
+            
+    </div><br><br><br></div>
+
 
     <div id="footer">
         <!-- Pie de página-->
@@ -235,13 +205,13 @@
                                 <h6 class="text-uppercase fw-bold mb-4">
                                   Contact
                                 </h6>
-                                <p><i class="fas fa-home me-3"></i> España, Murcia 30004</p>
+                                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
                                 <p>
                                   <i class="fas fa-envelope me-3"></i>
-                                  info@contosox.com
+                                  info@example.com
                                 </p>
-                                <p><i class="fas fa-phone me-3"></i> + 34 234 567 88</p>
-                                <p><i class="fas fa-print me-3"></i> + 34 234 567 89</p>
+                                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
                               </div>
                               <!-- Grid column -->
                             </div>
