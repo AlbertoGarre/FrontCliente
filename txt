@@ -1,3 +1,0 @@
-el logo de la navbar tiene que ser el home
-los botones de la nav bar son
-seguimiento // enviar // soluciones logisticas (dhl)
