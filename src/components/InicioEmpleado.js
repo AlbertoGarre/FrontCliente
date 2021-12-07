@@ -11,8 +11,8 @@ const InicioEmpleado = () => {
             <div id="listaBotones">
                 <div className="card">
                     <div className="card-header" id="headingOne">
-                        <h5 className="mb-0">
-                            <button className="btn btn-link"  data-target="">
+                        <h5 className="mb-0 d-flex justify-content-center">
+                            <button className="btn btn-link "  data-target="">
                                 TAREAS FINALIZADAS
                             </button>
                         </h5>
@@ -21,7 +21,7 @@ const InicioEmpleado = () => {
                 <br/>
                 <div className="card">
                     <div className="card-header" id="headingTwo">
-                        <h5 className="mb-0">
+                        <h5 className="mb-0 d-flex justify-content-center">
                             <button className="btn btn-link "  data-target="">
                                 TAREAS PENDIENTES
                             </button>
@@ -31,7 +31,7 @@ const InicioEmpleado = () => {
                 <br/>
                 <div className="card">
                     <div className="card-header" id="headingThree">
-                        <h5 className="mb-0">
+                        <h5 className="mb-0 d-flex justify-content-center">
                             <button className="btn btn-link "  data-target="">
                                 ASIGNACIÓN DE TAREAS
                             </button>

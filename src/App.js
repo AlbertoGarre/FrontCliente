@@ -9,6 +9,12 @@ import NuevoEnvio from './components/NuevoEnvio'
 import Acceso from './components/Acceso'
 import InicioEmpleado from './components/InicioEmpleado'
 import InicioAdmin from './components/InicioAdmin'
+import TareasFinalizadas from './components/TareasFinalizadas'
+import TareasPendientes from './components/TareasPendientes'
+import AsignacionTareas from './components/AsignacionTareas'
+import ConfirmacionDatos from './components/ConfirmacionDatos'
+import NuevoEmpleado from './components/NuevoEmpleado'
+import ListaUsuarios from './components/ListaUsuarios'
 
 const App = () => {
   const [codigoSeguimiento, setCodigoSeguimiento] = useState('')
@@ -58,7 +64,14 @@ const App = () => {
         <Route path='/Acceso' element={<Acceso />} />
         <Route path='/InicioEmpleado' element={<InicioEmpleado />} />
         <Route path='/InicioAdmin' element={<InicioAdmin />} />
+        <Route path='/TareasFinalizadas' element={<TareasFinalizadas />} />
+        <Route path='/TareasPendientes' element={<TareasPendientes />} />
+        <Route path='/AsignacionTareas' element={<AsignacionTareas />} />
+        <Route path='/ConfirmacionDatos' element={<ConfirmacionDatos />} />
+        <Route path='/NuevoEmpleado' element={<NuevoEmpleado />} />
+        <Route path='/ListaUsuarios' element={<ListaUsuarios />} />
 
+        TareasFinalizadas
       </Routes>
       <Footer />
     </Router>
