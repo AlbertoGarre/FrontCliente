@@ -7,44 +7,6 @@ const NuevoEnvio = ({tarifas, pulsa, tarifaSeleccionada}) => {
             <h2 className="w-auto text-center py-5 mt-3">Solicita Recogida</h2>
             <div className="row">
 
-                <div className="col-md-4 order-md-2 mb-4 mt-md-5">
-
-                    <h4 className="d-flex justify-content-between align-items-center mb-3">
-                        <span className="text-muted">Tu carrito</span>
-                        <span className="badge badge-secondary badge-pill">3</span>
-                    </h4>
-                    <ul className="list-group mb-3">
-                        <li className="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 className="my-0">Económica</h6>
-                                <small className="text-muted">Hasta 1 kg; 30x20x10 cm </small>
-                            </div>
-                            <span className="text-muted">5€</span>
-                        </li>
-                        <li className="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 className="my-0">Hogar</h6>
-                                <small className="text-muted">Hasta 7 kg; 50x50x50 cm</small>
-                            </div>
-                            <span className="text-muted">15€</span>
-                        </li>
-                        <li className="list-group-item d-flex justify-content-between bg-light text-success">
-                            <div className="">
-                                <h6 className="my-0">Profesional</h6>
-                                <small className="">Hasta 25 kg; Volumen transportable*</small>
-                            </div>
-                            <span className="">50€</span>
-                        </li>
-
-                        <li className="list-group-item d-flex justify-content-between">
-                            <span>Total (Euros)</span>
-                            <strong>50€</strong>
-                        </li>
-                    </ul>
-
-
-                </div>
-
                 <div className="col-md-8 order-md-1">
                     <form>
 
