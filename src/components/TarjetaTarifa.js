@@ -1,10 +1,7 @@
 import React from 'react'
 
-
 const TarjetaTarifa = ({ seleccionada, pulsa, tarifa}) => {
     return (
-
-        
             <div className="card mb-4 shadow-sm">
                 <div className="card-header">
                     <h4 className="my-0 font-weight-normal">{tarifa.titulo}</h4>
@@ -19,8 +16,6 @@ const TarjetaTarifa = ({ seleccionada, pulsa, tarifa}) => {
                     <button type="button" style={{ backgroundColor: 'white' }} className={'btn btn-lg btn-block btn-outline-primary ' + (seleccionada ? 'text-success border-0 font-weight-bold' : 'text-muted')}>{seleccionada ? "Seleccionada":"Contrata ahora"}</button>
                 </div>
             </div>
-
     )
 }
-
 export default TarjetaTarifa

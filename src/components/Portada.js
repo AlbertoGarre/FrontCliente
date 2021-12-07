@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
+import CodigoSeguimiento from './CodigoSeguimiento'
 
-const Portada = () => {
+const Portada = ({codigoSeguimiento}) => {
     return (
 
         /*Contenido de la página*/
@@ -8,23 +9,10 @@ const Portada = () => {
 
             <br />
             <br />
-
+            
             <div className="center imagenDeFondo" style={{width: '100%'}}>
-
-                <div className="d-flex justify-content-center ">
-                    <div className="espaciado">
-                        <div className="intro">
-                            <h2 className="text-center pb-3">Siga su envio</h2>
-                        </div>
-                        <form className="form-inline " method="post">
-                            <div className="form-group mr-2 ">
-                                <input className="form-control cristal" type="text" name="inputNumSeguimiento"
-                                    placeholder=" Número de seguimiento " />
-                            </div>
-                            <div className="form-group "><button className="btn btn-primary " type="submit">Seguir envío </button></div>
-                        </form>
-                    </div>
-                </div>
+                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento}/>
+                
             </div>
 
 
