@@ -7,6 +7,8 @@ import Tarifas from './components/Tarifas'
 import Seguimiento from './components/Seguimiento'
 import NuevoEnvio from './components/NuevoEnvio'
 import Acceso from './components/Acceso'
+import InicioEmpleado from './components/InicioEmpleado'
+import InicioAdmin from './components/InicioAdmin'
 
 const App = () => {
   const [codigoSeguimiento, setCodigoSeguimiento] = useState('')
@@ -52,7 +54,10 @@ const App = () => {
         <Route path='/Tarifas' element={<Tarifas pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
         <Route path='/NuevoEnvio' element={<NuevoEnvio pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
         <Route path='/Seguimiento' element={<Seguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>} />
+        
         <Route path='/Acceso' element={<Acceso />} />
+        <Route path='/InicioEmpleado' element={<InicioEmpleado />} />
+        <Route path='/InicioAdmin' element={<InicioAdmin />} />
 
       </Routes>
       <Footer />
