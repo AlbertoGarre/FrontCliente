@@ -1,6 +1,7 @@
 import React from 'react'
+import TarjetaTarifa from './TarjetaTarifa'
 
-const NuevoEnvio = () => {
+const NuevoEnvio = ({tarifas, pulsa, tarifaSeleccionada}) => {
     return (
         <div id="content" className="container m-0 p-4 ">
             <h2 className="w-auto text-center py-5 mt-3">Solicita Recogida</h2>
@@ -231,53 +232,12 @@ const NuevoEnvio = () => {
 
             <div className="container">
                 <div className="card-deck mb-3 text-center">
-                    <div className="card mb-4 shadow-sm ">
-
-                        <div className="card-header">
-                            <h4 className="my-0 font-weight-normal">Económica</h4>
-                        </div>
-                        <div className="card-body ">
-                            <h1 className="card-title pricing-card-title">5€ <small className="text-muted">por envío</small>
-                            </h1>
-                            <ul className="list-unstyled mt-3 mb-4">
-                                <li>Hasta 1 kg de peso</li>
-                                <li>Volumen inferior a 30x20x10 cm</li>
-                                <li>Entrega antes de 48 horas</li>
-                                <li>El mejor servicio</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div className="card mb-4 shadow-sm">
-                        <div className="card-header">
-                            <h4 className="my-0 font-weight-normal">Hogar</h4>
-                        </div>
-                        <div className="card-body">
-                            <h1 className="card-title pricing-card-title">15€ <small className="text-muted">por envío</small>
-                            </h1>
-                            <ul className="list-unstyled mt-3 mb-4">
-                                <li>Hasta 7 kg de peso</li>
-                                <li>Volumen inferior a 50x50x50 cm</li>
-                                <li>Entrega antes de 48 horas</li>
-                                <li>El mejor servicio</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="card mb-4 shadow-sm">
-                        <div className="card-header">
-                            <h4 className="my-0 font-weight-normal">Profesional</h4>
-                        </div>
-                        <div className="card-body bg-success text-light">
-                            <h1 className="card-title pricing-card-title">50€ <small className="text-light">por envío</small>
-                            </h1>
-                            <ul className="list-unstyled mt-3 mb-4">
-                                <li>Hasta 25 kg de peso</li>
-                                <li>Volumen transportable por un operario</li>
-                                <li>Entrega antes de 48 horas</li>
-                                <li>El mejor servicio</li>
-                            </ul>
-                        </div>
-                    </div>
+                {tarifas.map((tarifa) => (
+                        <TarjetaTarifa
+                            seleccionada={tarifaSeleccionada == tarifa.key}
+                            tarifa={tarifa}
+                            pulsa={pulsa} />
+                    ))}
                 </div>
 
 
