@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Tasks from './components/Tasks'
-import AddTask from './components/AddTask'
-import About from './components/About'
 import HeaderCliente from './components/HeaderCliente'
 import Portada from './components/Portada'
 import Tarifas from './components/Tarifas'
@@ -13,8 +10,42 @@ import NuevoEnvio from './components/NuevoEnvio'
 import Acceso from './components/Acceso'
 
 const App = () => {
+
+  const [tarifas, setTarifas] = useState([
+    {
+      id: 1,
+      titulo: "Económica",
+      Precio: "5 €",
+      Cualidades: ["Hasta 1 kg de peso", "Volumen inferior a 30x20x10 cm", "Entrega antes de 48 horas", "El mejor servicio"],
+    },
+    {
+      id: 2,
+      titulo: "Hogar",
+      Precio: "15 €",
+      Cualidades: ["Hasta 7 kg de peso", "Volumen inferior a 50x50x50 cm", "Entrega antes de 48 horas", "El mejor servicio"],
+    },
+    {
+      id: 3,
+      titulo: "Profesional",
+      Precio: "50 €",
+      Cualidades: ["Hasta 25 kg de peso", "Volumen transportable por un operario", "Entrega antes de 48 horas", "El mejor servicio"],
+    },
+  ])
+
+  const [tarifaSeleccionada, setTarifaSeleccionada] = useState(0)
+
+  const pulsa = (id) => {
+    //establece el valor del nuevo estado
+    setTarifaSeleccionada(id)
+    //console.log
+    console.log("Tarifa seleccionada: ", tarifaSeleccionada)
+  }
+
+
+
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([])
+
 
   useEffect(() => {
     const getTasks = async () => {
@@ -54,10 +85,6 @@ const App = () => {
     const data = await res.json()
 
     setTasks([...tasks, data])
-
-    // const id = Math.floor(Math.random() * 10000) + 1
-    // const newTask = { id, ...task }
-    // setTasks([...tasks, newTask])
   }
 
   // Delete Task
@@ -95,20 +122,20 @@ const App = () => {
 
   return (
     <Router>
-      
-        <HeaderCliente
-          onAdd={() => setShowAddTask(!showAddTask)}
-          showAdd={showAddTask}
-        />
-        <Routes>
-          
-          <Route path='/' element={<Portada />} />
-          <Route path='/Tarifas' element={<Tarifas />} />
-          <Route path='/Seguimiento' element={<Seguimiento />} />
-          <Route path='/NuevoEnvio' element={<NuevoEnvio />} />
-          <Route path='/Acceso' element={<Acceso />} />
-        </Routes>
-        <Footer />
+
+      <HeaderCliente
+        onAdd={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}
+      />
+      <Routes>
+
+        <Route path='/' element={<Portada />} />
+        <Route path='/Tarifas' element={<Tarifas pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada}/>} />
+        <Route path='/Seguimiento' element={<Seguimiento />} />
+        <Route path='/NuevoEnvio' element={<NuevoEnvio />} />
+        <Route path='/Acceso' element={<Acceso />} />
+      </Routes>
+      <Footer />
     </Router>
   )
 }
