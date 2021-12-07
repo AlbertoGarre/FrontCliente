@@ -2,13 +2,18 @@ import React from 'react'
 import TarjetaTarifa from './TarjetaTarifa'
 
 const NuevoEnvio = ({tarifas, pulsa, tarifaSeleccionada}) => {
+
+const limpia = () => {
+    document.getElementById("formularioNuevoEnvio").reset()
+}
+
     return (
         <div id="content" className="container m-0 p-4 ">
             <h2 className="w-auto text-center py-5 mt-3">Solicita Recogida</h2>
             <div className="row">
 
                 <div className="col-md-8 order-md-1">
-                    <form>
+                    <form id='formularioNuevoEnvio'>
 
                         <h3>Datos generales</h3>
 
@@ -119,7 +124,7 @@ const NuevoEnvio = ({tarifas, pulsa, tarifaSeleccionada}) => {
                                 placeholder="Observaciones de la recogida" />
                         </div>
 
-                        <a href="######">Limpiar campos</a>
+                        <a  href="#" onClick={limpia} class="text-success">Limpiar campos</a>
                         <br />
                         <br /><br />
 
@@ -180,7 +185,7 @@ const NuevoEnvio = ({tarifas, pulsa, tarifaSeleccionada}) => {
                                 placeholder="Observaciones de la entrega" />
                         </div>
 
-                        <a href="######">Limpiar campos</a>
+                        <a href="#" onClick={limpia} class="text-success">Limpiar campos</a>
 
                     </form>
                 </div>

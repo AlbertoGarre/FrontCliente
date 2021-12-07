@@ -1,5 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 
-const CodigoSeguimiento = ({codigoSeguimiento}) => {
+const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="d-flex justify-content-center ">
             <div className="espaciado">
@@ -8,10 +12,23 @@ const CodigoSeguimiento = ({codigoSeguimiento}) => {
                 </div>
                 <form className="form-inline " method="post">
                     <div className="form-group mr-2 ">
-                        <input className="form-control cristal" type="text" name="inputNumSeguimiento"
-                            placeholder={codigoSeguimiento == '' ? "Número de seguimiento " : codigoSeguimiento }/>
+                        <input className="form-control cristal" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento"
+                            placeholder={codigoSeguimiento == '' ? "Número de seguimiento " : codigoSeguimiento} />
                     </div>
-                    <div className="form-group "><button className="btn btn-success " type="submit">Seguir envío </button></div>
+                    <div className="form-group ">
+                        <button
+                            className="btn btn-success "
+                            onClick={() => {
+                                let codigo = document.getElementById("entradaCodigoSeguimiento").value
+                                setCodigoSeguimiento(codigo)
+                                setTimeout(() => {
+                                    navigate('/Seguimiento')
+                                }, 1000);
+                            }}
+                            type="button">
+                            Seguir envío
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -48,10 +48,10 @@ const App = () => {
       <HeaderCliente />
       <Routes>
 
-        <Route path='/' element={<Portada codigoSeguimiento={codigoSeguimiento} />} />
+        <Route path='/' element={<Portada codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>} />
         <Route path='/Tarifas' element={<Tarifas pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
         <Route path='/NuevoEnvio' element={<NuevoEnvio pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
-        <Route path='/Seguimiento' element={<Seguimiento codigoSeguimiento={codigoSeguimiento} />} />
+        <Route path='/Seguimiento' element={<Seguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>} />
         <Route path='/Acceso' element={<Acceso />} />
 
       </Routes>

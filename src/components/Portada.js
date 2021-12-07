@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import CodigoSeguimiento from './CodigoSeguimiento'
 
-const Portada = ({codigoSeguimiento}) => {
+const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
     return (
 
         /*Contenido de la página*/
@@ -11,7 +11,7 @@ const Portada = ({codigoSeguimiento}) => {
             <br />
             
             <div className="center imagenDeFondo" style={{width: '100%'}}>
-                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento}/>
+                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
                 
             </div>
 
