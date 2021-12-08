@@ -1,6 +1,6 @@
 const Acceso = () => {
+    
     return (
-
         <div id="content" className=" m-0 p-4" style={{ width: "100%" }}>
             <br />
             <br />
@@ -13,7 +13,7 @@ const Acceso = () => {
 
                 <div className="checkbox mb-3  ">
                     <label>
-                        <input type="checkbox" value="remember-me"/> Recuerda sesión
+                        <input type="checkbox" value="remember-me" /> Recuerda sesión
                     </label>
                 </div>
 

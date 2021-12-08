@@ -1,13 +1,12 @@
 import React from 'react'
 
 const InicioEmpleado = () => {
+    
     return (
         <div id="content" className=" m-0 p-4" style={{width: '100%'}}>
-
             <br/>
             <br/>
             <br/>
-
             <div id="listaBotones">
                 <div className="card">
                     <div className="card-header" id="headingOne">

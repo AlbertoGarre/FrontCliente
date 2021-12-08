@@ -6,16 +6,11 @@ const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
 
         /*Contenido de la página*/
         <div id="content" className=" m-0 p-4" style={{width: '100%'}}>
-
             <br />
             <br />
-            
             <div className="center imagenDeFondo" style={{width: '100%'}}>
                 <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
-                
             </div>
-
-
             <br />
             <br />
             <br />
@@ -41,8 +36,6 @@ const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
             <br />
             <br />
             <br />
-            
-
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
@@ -87,10 +80,6 @@ const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
                 </div>
             </div>
         </div>
-
-
-
-
     )
 }
 

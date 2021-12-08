@@ -1,15 +1,14 @@
 import React from 'react'
 
 const AsignacionTareas = () => {
+
     return (
         <div>
             <br /><br /><br /><br />
-
             <h4 className="mb-3 d-flex justify-content-center">Añadir nuevo paquete</h4>
             <form className="needs-validation col-12">
                 <div className="form-row  mb-3 d-flex justify-content-center">
                     <input type="text" className=" input-lg rounded col-5 col-sm-4 mr-sm-3 mb-0" id="firstName" placeholder="" value="" required />
-
                     <button className="btn btn-success btn-block col-5 col-sm-4 ml-3 ml-sm-3" type="submit">Añadir paquete</button>
                 </div>
             </form>
@@ -43,7 +42,6 @@ const AsignacionTareas = () => {
                 </table>
             </div>
         </div>
-
     )
 }
 

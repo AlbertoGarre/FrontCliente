@@ -2,14 +2,13 @@ import React from 'react'
 import CodigoSeguimiento from './CodigoSeguimiento'
 
 const Seguimiento = ({codigoSeguimiento, setCodigoSeguimiento}) => {
+    
     return (
-
         <>
             <br />
             <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
             <br /><br /><br />
             <div className="d-flex justify-content-center" style={codigoSeguimiento == "" ? {visibility: 'hidden'}:{}}>
-
                 <table className="table table-striped col-12 col-sm-8 pl-sm-5">
                     <thead>
                         <tr>
@@ -25,19 +24,16 @@ const Seguimiento = ({codigoSeguimiento, setCodigoSeguimiento}) => {
                         <tr>
                             <td>Oficina local</td>
                             <td>Pendiente</td>
-
                         </tr>
                         <tr>
                             <td>Destino</td>
                             <td>Pendiente</td>
-
                         </tr>
                     </tbody>
                 </table>
             </div>
             <br /><br />
         </>
-
     )
 }
 
