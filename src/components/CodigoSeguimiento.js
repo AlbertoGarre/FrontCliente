@@ -10,7 +10,18 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                 <div className="intro">
                     <h2 className="text-center pb-3">Siga su envio</h2>
                 </div>
-                <form className="form-inline " method="post">
+                <form 
+                        className="form-inline "
+                        method="post"
+                        onSubmit={(e) => {
+                            e.preventDefault()
+                            let codigo = document.getElementById("entradaCodigoSeguimiento").value
+                            setCodigoSeguimiento(codigo)
+                            setTimeout(() => {
+                                navigate('/Seguimiento')
+                            }, 100)
+                            return false
+                        }}>
                     <div className="form-group mr-2 ">
                         <input className="form-control cristal" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento"
                             placeholder={codigoSeguimiento == '' ? "Número de seguimiento " : codigoSeguimiento} />
@@ -18,14 +29,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                     <div className="form-group ">
                         <button
                             className="btn btn-success "
-                            onClick={() => {
-                                let codigo = document.getElementById("entradaCodigoSeguimiento").value
-                                setCodigoSeguimiento(codigo)
-                                setTimeout(() => {
-                                    navigate('/Seguimiento')
-                                }, 1000);
-                            }}
-                            type="button">
+                            type="submit">
                             Seguir envío
                         </button>
                     </div>
