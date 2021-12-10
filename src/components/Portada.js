@@ -81,6 +81,7 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                         <div className="card border-0 shadow ">
                             <div className="card-body"> <i className="fa fa-search-plus h1 display-4 text-success  mb-3"></i>
                                 <h4 className="mt-4 mb-3">Más información</h4>
+                                &nbsp;
                                 <p>Acerquese a nuestras oficinas a solicitar más información o bien consultenos a través de email</p>
                             </div>
                         </div>
