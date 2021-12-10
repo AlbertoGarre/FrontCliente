@@ -42,6 +42,7 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => 
                                 <input type="text" className="form-control m-0 p-0" id="inputBultos" placeholder="Nº de bultos" />
                             </div>
                         </div>
+                        <a href="#" onClick={limpia} className="text-success">Limpiar campos</a>
                         <br /><br />
                         <h3>Datos de recogida</h3>
                         <div className="form-row m-0 p-0">
