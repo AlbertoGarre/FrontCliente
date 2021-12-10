@@ -38,7 +38,7 @@ const HeaderCliente = ({ title, onAdd, showAdd }) => {
                         <Link className="dropdown-item" to="#">Trabaja con nosotros</Link>
                     </div>
                 </li>
-                <li className="ml-auto nav-item">
+                <li className="ml-md-auto nav-item">
                     <Link className="my-2 my-md-0 text-dark" to="/Acceso">Usuarios</Link>
                 </li>
             </ul>
