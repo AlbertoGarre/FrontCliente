@@ -30,7 +30,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                     <div className="form-group mx-auto input-group pb-2">
                         <input className="form-control border-secondary rounded-left mx-auto" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento" placeholder="Número de seguimiento" />
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary border border-secondary text-dark " type="submit"><i class="fas fa-search"></i></button>
+                            <button class="btn btn-outline-secondary border border-secondary text-dark " type="submit"><i class="fas fa-search texto-verde sombra-blanca"></i></button>
                         </div>
                     </div>
                 </form>
