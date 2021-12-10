@@ -59,7 +59,7 @@ const Footer = () => {
                     </div>
                 </section>
                 <div className="text-center p-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
-                    Copyright © 2021
+                    Copyright © 2021 &nbsp;
                     <a className="text-reset fw-bold" href="https://AlbertGarre.com/">Alberto Garre Muñoz</a>
                 </div>
             </footer>
