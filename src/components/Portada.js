@@ -8,9 +8,9 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
         <div id="content" className=" m-0 p-4" style={{ width: '100%' }}>
             <br />
             <br />
-            <div className="center imagenDeFondo2 row  justify-content-start mx-0" style={{ top: "5rem", width: '100%' }}>
-                <div className="col-md-7 ml-md-5 text-center espaciado-titulo mt-6 ml-1 ml-md-0 p-0 pl-md-5">
-                    <div className="ml-md-5 p-0 rounded cristal" style={{ backgroundColor: "#000000b0", width: "25rem", height: "11rem" }}>
+            <div className="center imagenDeFondo2 row justify-content-center px-0 mx-0" style={{ top: "5rem", width: '100%' }}>
+                <div className="col-12 col-md-8 mx-auto px-0 justify-content-center text-center espaciado-titulo mt-6">
+                    <div className="rounded cristal mx-auto px-0" style={{ backgroundColor: "#000000b0", width: "25rem", height: "11rem" }}>
                         <h1 className="mb-5 display-3 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}><strong>CONTOSOX</strong></h1>
                         <h4 className="mb-5 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}>SIEMPRE LLEGAMOS A TIEMPO</h4>
                     </div>
