@@ -37,7 +37,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                     </div>
                     <div className="form-group ">
                         <button className="btn btn-success " type="submit">
-                            Seguir envío
+                            Sigue tu envío
                         </button>
                     </div>
                 </form>
