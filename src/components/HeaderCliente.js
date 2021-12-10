@@ -14,7 +14,7 @@ const HeaderCliente = ({ title, onAdd, showAdd }) => {
     }
 
     return (
-        <nav id="header" className="cristal navbar navbar-expand-sm text-dark fixed-top navbar-light">
+        <nav id="header" className="cristal navbar navbar-expand-md text-dark fixed-top navbar-light">
             <Link className="navbar-brand text-success" to="/"><i className="fab fa-contao display-4"></i></Link>
             <Link className="nav-item nav-link bg-transparent text-success border-bottom border-success pb-2" to="/NuevoEnvio">Enviar</Link>
             <button className="navbar-toggler" onClick={accionaNav} type="button" data-toggle="collapse" data-target="#navbarsExample03">
@@ -27,6 +27,9 @@ const HeaderCliente = ({ title, onAdd, showAdd }) => {
                 <li className="nav-item">
                     <Link className="nav-link " to="#">Soluciones logísticas</Link>
                 </li>
+                <li className="nav-item">
+                    <Link className="nav-link " to="/Tarifas">Tarifas</Link>
+                </li>
                 <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="#" id="dropdown03" data-toggle="dropdown">Empresa</Link>
                     <div className="dropdown-menu">
@@ -35,11 +38,10 @@ const HeaderCliente = ({ title, onAdd, showAdd }) => {
                         <Link className="dropdown-item" to="#">Trabaja con nosotros</Link>
                     </div>
                 </li>
-                <li className="nav-item">
-                    <Link className="nav-link " to="/Tarifas">Tarifas</Link>
+                <li className="ml-auto nav-item">
+                    <Link className="my-2 my-md-0 text-dark" to="/Acceso">Usuarios</Link>
                 </li>
             </ul>
-            <Link className="my-2 my-md-0 text-dark" to="/Acceso">Usuarios</Link>
         </nav>
     )
 }
