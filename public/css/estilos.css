@@ -28,16 +28,16 @@ Esos efectos los aplica a los elementos que tiene detrás ese elemento
 Si no
      background-color:BLANCO
 */
-@supports ((-webkit-backdrop-filter:saturate(180%) blur(20px)) or (backdrop-filter:saturate(180%) blur(20px)))
+@supports ((-webkit-backdrop-filter:saturate(180%) blur(20px) brightness(150%)) or (backdrop-filter:saturate(180%) blur(20px) brightness(150%)))
 {
     .cristal
     {
-        -webkit-backdrop-filter:blur(20px) saturate(180%);
-        backdrop-filter:blur(20px) saturate(180%);
+        -webkit-backdrop-filter:blur(20px) saturate(180%) brightness(10%);
+        backdrop-filter:blur(20px) saturate(180%) brightness(10%);
         background-color:hsla(0,0%,100%,.75)
     }
 }
-@supports not ((-webkit-backdrop-filter:saturate(180%) blur(20px)) or (backdrop-filter:saturate(180%) blur(20px)))
+@supports not ((-webkit-backdrop-filter:saturate(180%) blur(20px) brightness(150%)) or (backdrop-filter:saturate(180%) blur(20px) brightness(150%)))
 {
     .cristal{
         background-color:#fff
@@ -59,6 +59,31 @@ body, html {
 
     /* The image used */
     background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+  
+    /* Half height */
+    height: 40rem;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagenDeFondo2 {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    
+    width: 100%;
+
+    /* The image used */
+    background-image: url("../transporte.png");
+    
+    -webkit-filter: saturate(100%);
+    -moz-filter:    saturate(100%);
+    -o-filter:      saturate(100%);
+    -ms-filter:     saturate(100%);
+    filter:         saturate(100%);
   
     /* Half height */
     height: 40rem;

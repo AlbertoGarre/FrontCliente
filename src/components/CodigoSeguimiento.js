@@ -12,12 +12,10 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
     }, []);
 
     return (
-        <div className="d-flex justify-content-center ">
-            <div className="espaciado">
-                <div className="intro">
-                    <h2 className="text-center pb-3">Siga su envio</h2>
-                </div>
-                <form className="form-inline "
+        <div className="cristal rounded mx-auto px-3" style={{ width: "20rem" }}>
+            <div className="espaciado py-2">
+
+                <form className="form-inline border-secondary "
                     method="post"
                     onSubmit={(e) => {
                         e.preventDefault()
@@ -28,13 +26,12 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                         }, 100)
                         return false
                     }}>
-                    <div className="form-group mr-2 ">
-                        <input className="form-control cristal" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento" placeholder="Número de seguimiento" />
-                    </div>
-                    <div className="form-group ">
-                        <button className="btn btn-success " type="submit">
-                            Sigue tu envío
-                        </button>
+                    <h2 className="intro text-center mx-auto mt-1 mb-3">Sige tu envio</h2>
+                    <div className="form-group mx-auto input-group pb-2">
+                        <input className="form-control border-secondary rounded-left" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento" placeholder="Número de seguimiento" />
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary border border-secondary text-dark " type="submit"><i class="fas fa-search"></i></button>
+                        </div>
                     </div>
                 </form>
             </div>

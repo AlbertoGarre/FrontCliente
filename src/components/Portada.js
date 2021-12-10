@@ -8,7 +8,7 @@ const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
         <div id="content" className=" m-0 p-4" style={{width: '100%'}}>
             <br />
             <br />
-            <div className="center imagenDeFondo" style={{width: '100%'}}>
+            <div className="center imagenDeFondo2" style={{width: '100%'}}>
                 <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
             </div>
             <br />
