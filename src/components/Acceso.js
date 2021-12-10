@@ -7,7 +7,7 @@ const Acceso = () => {
             <br />
             <br />
             <form className="form-signin " >
-                <h1 className="h3 mb-3 font-weight-normal ">Regístrate</h1>
+                <h1 className="h3 mb-3 font-weight-normal ">Acceso</h1>
                 <input type="email" id="inputEmail" className="form-control" placeholder="ejemploemail@gmail.com" required autofocus />
                 <input type="password" id="inputPassword" className="form-control " placeholder="Password" required />
 
