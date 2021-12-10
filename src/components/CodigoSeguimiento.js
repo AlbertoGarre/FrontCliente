@@ -1,8 +1,19 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
 
     const navigate = useNavigate();
+
+    React.useEffect(() => {
+        console.log()
+        if (codigoSeguimiento == '') {
+            console.log("hola")
+        }
+        else {
+            document.getElementById("entradaCodigoSeguimiento").value = codigoSeguimiento
+        }
+    }, []);
 
     return (
         <div className="d-flex justify-content-center ">
@@ -10,28 +21,22 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                 <div className="intro">
                     <h2 className="text-center pb-3">Siga su envio</h2>
                 </div>
-                <form   className="form-inline "
-                        method="post"
-                        onSubmit={(e) => {
-                            e.preventDefault()
-                            let codigo = document.getElementById("entradaCodigoSeguimiento").value
-                            setCodigoSeguimiento(codigo)
-                            setTimeout(() => {
-                                navigate('/Seguimiento')
-                            }, 100)
-                            return false
-                        }}>
+                <form className="form-inline "
+                    method="post"
+                    onSubmit={(e) => {
+                        e.preventDefault()
+                        let codigo = document.getElementById("entradaCodigoSeguimiento").value
+                        setCodigoSeguimiento(codigo)
+                        setTimeout(() => {
+                            navigate('/Seguimiento')
+                        }, 100)
+                        return false
+                    }}>
                     <div className="form-group mr-2 ">
-                        <input className="form-control cristal" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento"
-                            placeholder={codigoSeguimiento == '' ? "Número de seguimiento" : codigoSeguimiento}
-                            onLoad={
-                                (codigoSeguimiento == '') ? ()=>{} : ()=>{document.getElementById("entradaCodigoSeguimiento").value = codigoSeguimiento}
-                            }/>
+                        <input className="form-control cristal" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento" placeholder="Número de seguimiento" />
                     </div>
                     <div className="form-group ">
-                        <button
-                            className="btn btn-success "
-                            type="submit">
+                        <button className="btn btn-success " type="submit">
                             Seguir envío
                         </button>
                     </div>
