@@ -13,7 +13,7 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) =
             <br />
             <div className="center imagenDeFondo2 row justify-content-center px-0 mx-0" style={{ top: "5rem", width: '100%' }}>
                 <div className="col-12 col-md-7 mx-auto px-0 justify-content-center text-center espaciado-titulo mt-6">
-                    <div className="rounded cristal mx-auto px-0 carta-titulo-portada border border-dark shadow" style={{ backgroundColor: "#ffffff70"}}>
+                    <div className="rounded cristal mx-auto px-0 carta-titulo-portada border border-secondary shadow" style={{ backgroundColor: "#ffffffa0"}}>
                         <h1 className="mb-5 display-3 texto-verde sombra-blanca"><strong>CONTOSOX</strong></h1>
                         <h4 className="mb-5 texto-verde sombra-blanca">Siempre llegamos a tiempo</h4>
                     </div>
