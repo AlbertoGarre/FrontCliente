@@ -114,7 +114,7 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
                                 placeholder="Observaciones de la recogida" />
                         </div>
 
-                        <a href="#" onClick={limpia} class="text-success">Limpiar campos</a>
+                        <a href="#" onClick={limpia} className="text-success">Limpiar campos</a>
                         <br />
                         <br /><br />
                         <h3>Datos de Entrega</h3>
@@ -169,7 +169,7 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
                             <input type="text" className="form-control m-0 p-0" id="inputObservacionesEntrega"
                                 placeholder="Observaciones de la entrega" />
                         </div>
-                        <a href="#" onClick={limpia} class="text-success">Limpiar campos</a>
+                        <a href="#" onClick={limpia} className="text-success">Limpiar campos</a>
                     </form>
                 </div>
             </div>
