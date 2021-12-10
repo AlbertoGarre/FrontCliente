@@ -12,7 +12,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
     }, []);
 
     return (
-        <div className="cristal rounded mx-auto px-1 py-1 shadow espaciado-seguimiento" style={{top: "6rem", width: "18rem", height: "8rem" }}>
+        <div className="cristal rounded mx-auto px-1 py-1 shadow espaciado-seguimiento border border-dark" style={{top: "6rem", width: "18rem", height: "8rem" }}>
             <div className="py-2 mx-2">
 
                 <form className="form-inline border-secondary "
