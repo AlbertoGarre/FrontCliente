@@ -188,15 +188,15 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
                     ))}
                 </div>
 
-                <div className="form-group m-0 p-0 pl-2 pt-4 pb-5">
+                <div className="form-group m-0 px-5 pt-4 pb-5">
                     <div className="form-check m-0 p-0">
-                        <input className="form-check-input m-0 p-0 mt-1" type="checkbox" id="gridCheck" />
-                        <label className="form-check-label m-0 pl-4" htmlFor="gridCheck">
+                        <input className="form-check-input m-0 p-0 mt-2" type="checkbox" id="gridCheck" />
+                        <label className="form-check-label m-0 pl-4 h5" htmlFor="gridCheck">
                             He leido y acepto <Link to='/PoliticaPrivacidad' className="text-success">la política de privacidad y
-                                condiciones de uso de la
-                                web</Link> *
-                            campo obligatorio
+                            condiciones de uso de la web</Link>
                         </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <small>* campo obligatorio</small>
                     </div>
                 </div>
                 <br/>
