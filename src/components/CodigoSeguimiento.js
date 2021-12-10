@@ -10,8 +10,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                 <div className="intro">
                     <h2 className="text-center pb-3">Siga su envio</h2>
                 </div>
-                <form 
-                        className="form-inline "
+                <form   className="form-inline "
                         method="post"
                         onSubmit={(e) => {
                             e.preventDefault()
