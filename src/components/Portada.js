@@ -1,16 +1,28 @@
 import { Link } from 'react-router-dom'
 import CodigoSeguimiento from './CodigoSeguimiento'
 
-const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
+const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) => {
+
+    setPaginaActual("/")
+    
     return (
 
         /*Contenido de la página*/
-        <div id="content" className=" m-0 p-4" style={{width: '100%'}}>
+        <div id="content" className=" m-0 p-4" style={{ width: '100%' }}>
             <br />
             <br />
-            <div className="center imagenDeFondo" style={{width: '100%'}}>
-                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
+            <div className="center imagenDeFondo2 row justify-content-center px-0 mx-0" style={{ top: "5rem", width: '100%' }}>
+                <div className="col-12 col-md-7 mx-auto px-0 justify-content-center text-center espaciado-titulo mt-6">
+                    <div className="rounded cristal mx-auto px-0 carta-titulo-portada border border-dark shadow" style={{ backgroundColor: "#ffffff70"}}>
+                        <h1 className="mb-5 display-3 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}><strong>CONTOSOX</strong></h1>
+                        <h4 className="mb-5 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}>SIEMPRE LLEGAMOS A TIEMPO</h4>
+                    </div>
+                </div>
+                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />
             </div>
+            <br />
+            <br />
+            <br />
             <br />
             <br />
             <br />
@@ -39,8 +51,8 @@ const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
-                        <p  style={{color: "grey" }} className="subtitle">Nuestros servicios</p>
-                        <h2 style={{color: "grey" }} className="mb-5">SIEMPRE LLEGAMOS A TIEMPO</h2>
+                        <br />
+                        <h4 style={{ color: "grey" }} className="mb-5">Nuestros servicios</h4>
                     </div>
                     <div className="col-lg-3 col-sm-6 mb-4">
                         <div className="card border-0 shadow ">
@@ -72,6 +84,7 @@ const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
                         <div className="card border-0 shadow ">
                             <div className="card-body"> <i className="fa fa-search-plus h1 display-4 text-success  mb-3"></i>
                                 <h4 className="mt-4 mb-3">Más información</h4>
+                                &nbsp;
                                 <p>Acerquese a nuestras oficinas a solicitar más información o bien consultenos a través de email</p>
                             </div>
                         </div>

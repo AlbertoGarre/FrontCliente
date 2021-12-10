@@ -40,7 +40,7 @@ Si no
 @supports not ((-webkit-backdrop-filter:saturate(180%) blur(20px)) or (backdrop-filter:saturate(180%) blur(20px)))
 {
     .cristal{
-        background-color:#fff
+        background-color:#fffe
     }
 }
 
@@ -69,11 +69,132 @@ body, html {
     background-size: cover;
 }
 
+.imagenDeFondo2 {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    
+    width: 100%;
+
+    /* The image used */
+    background-image: url("./transporte.png");
+    background-size: 100% 120%;
+    
+    -webkit-filter: saturate(100%);
+    -moz-filter:    saturate(100%);
+    -o-filter:      saturate(100%);
+    -ms-filter:     saturate(100%);
+    filter:         saturate(100%);
+  
+    /* Half height */
+    height: 40rem;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
   /*----------------------------------------*/
   /*Estilos de tarjetas*/
 
-.espaciado {
-    margin-top: 160px
+.espaciado-titulo {
+    margin-top: 10rem;
+}
+
+.espaciado-seguimiento {
+    margin-top: 11rem;
+}
+
+.carta-titulo-portada {
+    padding-top: 3rem;
+    width: 50rem;
+    height: 18rem;
+}
+
+@media only screen and (max-width: 1700px) {
+    .carta-titulo-portada {
+        padding-top: 2.5rem;
+        width: 45rem;
+        height: 17rem;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .carta-titulo-portada {
+        padding-top: 2rem;
+        width: 40rem;
+        height: 16rem;
+    }
+}
+@media only screen and (max-width: 1220px) {
+    .carta-titulo-portada {
+        padding-top: 1.5rem;
+        width: 38rem;
+        height: 16rem;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .carta-titulo-portada {
+        padding-top: 1.5rem;
+        width: 35rem;
+        height: 15rem;
+    }
+}
+@media only screen and (max-width: 906px) {
+    .carta-titulo-portada {
+        padding-top: 1.5rem;
+        width: 32rem;
+        height: 14rem;
+    }
+}
+@media only screen and (max-width: 846px) {
+    .carta-titulo-portada {
+        padding-top: 0.25rem;
+        width: 29rem;
+        height: 12rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .carta-titulo-portada {
+        padding-top: 0.25rem;
+        width: 28rem;
+        height: 12rem;
+    }
+}
+@media only screen and (max-width: 767px) {
+    
+    .carta-titulo-portada {
+        padding-top: 1rem;
+        width: 30rem;
+        height: 14rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    
+    .carta-titulo-portada {
+        padding-top: 0.25rem;
+        width: 28rem;
+        height: 12rem;
+    }
+}
+@media only screen and (max-width: 450px) {
+    
+    .carta-titulo-portada {
+        padding-top: 0.75rem;
+        width: 26rem;
+        height: 13rem;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .espaciado-titulo {
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+    }
+
+    .espaciado-seguimiento {
+        margin-top: 0rem;
+    }
 }
 
 .shadow {

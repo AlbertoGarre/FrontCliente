@@ -1,12 +1,16 @@
 import React from 'react'
 import CodigoSeguimiento from './CodigoSeguimiento'
 
-const Seguimiento = ({codigoSeguimiento, setCodigoSeguimiento}) => {
+const Seguimiento = ({codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) => {
+
+    setPaginaActual("/Seguimiento")
     
     return (
         <>
             <br />
-            <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
+            <div className='mt-5 pt-5 mt-md-0 pt-md-0'>
+                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
+            </div>
             <br /><br /><br />
             <div className="d-flex justify-content-center" style={codigoSeguimiento == "" ? {visibility: 'hidden'}:{}}>
                 <table className="table table-striped col-12 col-sm-8 pl-sm-5">
