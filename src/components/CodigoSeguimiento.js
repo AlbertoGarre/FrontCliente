@@ -26,7 +26,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                         }, 100)
                         return false
                     }}>
-                    <h2 className="intro text-center mx-auto mt-1 mb-3">Sige tu envio</h2>
+                    <h2 className="intro text-center mx-auto mt-1 mb-3">Sigue tu envio</h2>
                     <div className="form-group mx-auto input-group pb-2">
                         <input className="form-control border-secondary rounded-left mx-auto" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento" placeholder="Número de seguimiento" />
                         <div class="input-group-append">

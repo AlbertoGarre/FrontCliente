@@ -37,6 +37,10 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => 
                                 <label htmlFor=" inputNIF">NIF</label>
                                 <input type="text" className="form-control m-0 p-0" id="inputNIF" placeholder="48000000Z" />
                             </div>
+                            <div className="form-group col-md-2 m-0 p-0" >
+                                <label className='m-1' htmlFor=" inputBultos">Bultos por envío</label>
+                                <input type="text" className="form-control m-0 p-0" id="inputBultos" placeholder="Nº de bultos" />
+                            </div>
                         </div>
                         <br /><br />
                         <h3>Datos de recogida</h3>
@@ -136,15 +140,45 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => 
                             </div>
 
                             <div className="form-group m-0 p-0 mr-2">
+                                <label htmlFor="inputProvincia"></label>
+                                <input type="text" className="form-control m-0 p-0" id="inputProvincia"
+                                    placeholder="Provincia" />
+                            </div>
+
+                            <div className="form-group m-0 p-0 mr-2">
                                 <label htmlFor="inputPoblación"></label>
                                 <input type="text" className="form-control m-0 p-0" id="inputPoblación"
                                     placeholder="Población" />
                             </div>
 
+
                             <div className="form-group col-md-6 m-0 p-0">
                                 <label htmlFor="inputDireccion"></label>
                                 <input type="text" className="form-control m-0 p-0" id="inputCP"
                                     placeholder="Dirección: nombre, via, número, piso" />
+                            </div>
+                        </div>
+
+                        <div className="form-row m-0 p-0">
+                            <div className="form-group col-md-2 m-0 p-0 mr-2">
+                                <label htmlFor="inputNumero"></label>
+                                <input type="text" className="form-control m-0 p-0" id="inputNumero"
+                                    placeholder="Numero" />
+                            </div>
+                            <div className="form-group col-md-2 m-0 p-0 mr-2">
+                                <label htmlFor="inputEscalera"></label>
+                                <input type="text" className="form-control m-0 p-0" id="inputTelefonoEscalera"
+                                    placeholder="Escalera" />
+                            </div>
+                            <div className="form-group col-md-2 m-0 p-0 mr-2">
+                                <label htmlFor="inputPlanta"></label>
+                                <input type="text" className="form-control m-0 p-0" id="inputPlanta"
+                                    placeholder="Planta" />
+                            </div>
+                            <div className="form-group col-md-2 m-0 p-0 mr-2">
+                                <label htmlFor="inputPuerta"></label>
+                                <input type="text" className="form-control m-0 p-0" id="inputPuerta"
+                                    placeholder="Puerta" />
                             </div>
                         </div>
 
