@@ -21,7 +21,7 @@ const HeaderCliente = ({ title, onAdd, showAdd }) => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <ul className={"navbar-collapse navbar-nav mr-auto " + (menuColapsado ? "collapse" : "")} id="navbarsExample03">
-                <li className="nav-item mr-4 active">
+                <li className="nav-item mr-4">
                     <Link className="h5 text-dark nav-link" to="/Seguimiento">Seguimiento <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item mr-4">
