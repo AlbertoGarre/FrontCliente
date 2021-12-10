@@ -3,8 +3,10 @@ import TarjetaTarifa from './TarjetaTarifa'
 import { useNavigate } from 'react-router-dom';
 
 
-const Tarifas = ({ tarifas, pulsa, tarifaSeleccionada }) => {
+const Tarifas = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => {
 
+    setPaginaActual("/Tarifas")
+    
     const navigate = useNavigate();
 
     const pulsaYRedirige = (key) => {

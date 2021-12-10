@@ -22,6 +22,8 @@ import PoliticaPrivacidad from './components/PoliticaPrivacidad'
 const App = () => {
     const [codigoSeguimiento, setCodigoSeguimiento] = useState('')
 
+    const [paginaActual, setPaginaActual] = useState("/")
+
     const [tarifas, setTarifas] = useState([
         {
             key: 1,
@@ -56,13 +58,13 @@ const App = () => {
     return (
         <Router>
 
-            <HeaderCliente />
+            <HeaderCliente paginaActual={paginaActual} />
             <Routes>
 
-                <Route path='/' element={<Portada codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
-                <Route path='/Tarifas' element={<Tarifas pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
-                <Route path='/NuevoEnvio' element={<NuevoEnvio pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
-                <Route path='/Seguimiento' element={<Seguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
+                <Route path='/' element={<Portada setPaginaActual={setPaginaActual} codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
+                <Route path='/Tarifas' element={<Tarifas setPaginaActual={setPaginaActual} pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
+                <Route path='/NuevoEnvio' element={<NuevoEnvio setPaginaActual={setPaginaActual} pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
+                <Route path='/Seguimiento' element={<Seguimiento setPaginaActual={setPaginaActual} codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
 
                 <Route path='/Acceso' element={<Acceso />} />
                 <Route path='/InicioEmpleado' element={<InicioEmpleado />} />

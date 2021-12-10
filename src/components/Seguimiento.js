@@ -1,7 +1,9 @@
 import React from 'react'
 import CodigoSeguimiento from './CodigoSeguimiento'
 
-const Seguimiento = ({codigoSeguimiento, setCodigoSeguimiento}) => {
+const Seguimiento = ({codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) => {
+
+    setPaginaActual("/Seguimiento")
     
     return (
         <>

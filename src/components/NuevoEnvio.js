@@ -2,8 +2,10 @@ import React from 'react'
 import TarjetaTarifa from './TarjetaTarifa'
 import { Link } from 'react-router-dom';
 
-const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
+const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => {
 
+    setPaginaActual("/NuevoEnvio")
+    
     const limpia = () => {
         document.getElementById("formularioNuevoEnvio").reset()
     }

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import CodigoSeguimiento from './CodigoSeguimiento'
 
-const Portada = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
+const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) => {
+
+    setPaginaActual("/")
+    
     return (
 
         /*Contenido de la página*/
