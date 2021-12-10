@@ -14,7 +14,7 @@ const TarjetaTarifa = ({ seleccionada, pulsa, tarifa }) => {
                         <li className={(seleccionada ? 'text-white' : '')}>{Cualidad}</li>
                     ))}
                 </ul>
-                <button type="button" style={{ backgroundColor: 'white' }} className={'btn btn-lg btn-block btn-outline-primary ' + (seleccionada ? 'text-success border-0 font-weight-bold' : 'text-muted')}>{seleccionada ? "Seleccionada" : "Contrata ahora"}</button>
+                <button type="button" style={{ backgroundColor: 'white' }} className={'btn btn-lg btn-block btn-outline-success ' + (seleccionada ? 'text-success border-0 font-weight-bold' : 'text-muted')}>{seleccionada ? "Seleccionada" : "Contrata ahora"}</button>
             </div>
         </div>
     )
