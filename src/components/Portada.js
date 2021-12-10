@@ -65,7 +65,7 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) =
                     </div>
                     <div className="col-lg-3 col-sm-6 mb-4">
                         <div className="card border-0 shadow ">
-                            <div className="card-body"> <i className="fa fa-users h1 display-4 text-warning   mb-3"></i>
+                            <div className="card-body"> <i className="fa fa-users h1 display-4 text-warning mb-3"></i>
                                 <h4 className="mt-4 mb-3">Nuestro objetivo: tu satisfacción</h4>
                                 <p>Nuestro objetivo es desarrollar servicios que cumplan con las expectativas de nuestros clientes. </p>
                             </div>

@@ -46,8 +46,16 @@ Si no
 
 /*estilo de la imagen de fondo*/
 
+.h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
+    margin-bottom: .5rem;
+    font-weight: 350;
+    line-height: 1.2;
+    color: #006000ff;
+}
+
 body, html {
     height: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
 }
 
 .imagenDeFondo {
