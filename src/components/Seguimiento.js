@@ -8,7 +8,9 @@ const Seguimiento = ({codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }
     return (
         <>
             <br />
-            <div className='mt-5 pt-5 mt-md-0 pt-md-0'>
+            <br />
+            <br />
+            <div className='mt-0 pt-2 pt-md-0'>
                 <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
             </div>
             <br /><br /><br />
