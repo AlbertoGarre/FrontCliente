@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
@@ -6,14 +7,20 @@ const HeaderCliente = ({ title, onAdd, showAdd }) => {
 
     const location = useLocation()
 
+    const [menuColapsado, setMenuColapsado] = useState(true)
+
+    const accionaNav = () => {
+        setMenuColapsado(!menuColapsado)
+    }
+
     return (
         <nav id="header" className="cristal navbar navbar-expand-sm text-dark fixed-top navbar-light">
             <Link className="navbar-brand text-success" to="/"><i className="fab fa-contao display-4"></i></Link>
             <Link className="nav-item nav-link bg-transparent text-success border-bottom border-success pb-2" to="/NuevoEnvio">Enviar</Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03">
+            <button className="navbar-toggler" onClick={accionaNav} type="button" data-toggle="collapse" data-target="#navbarsExample03">
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <ul className="collapse navbar-collapse navbar-nav mr-auto"  id="navbarsExample03">
+            <ul className={"navbar-collapse navbar-nav mr-auto " + (menuColapsado ? "collapse" : "")} id="navbarsExample03">
                 <li className="nav-item active">
                     <Link className="nav-link" to="/Seguimiento">Seguimiento <span className="sr-only">(current)</span></Link>
                 </li>
