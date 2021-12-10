@@ -46,12 +46,16 @@ Si no
 
 /*estilo de la imagen de fondo*/
 
+.texto-verde {
+    color: #006000ff
+}
+
 .sombra-negra {
     text-shadow: 2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000;
 }
 
 .sombra-blanca {
-    text-shadow: 0px 0px 8px #fff, 0px 0px 16px #fff, 0px 0px 16px #fff;
+    text-shadow: 0px 0px 4px #fff, 0px 0px 8px #fff, 0px 0px 16px #fff;
 }
 
 .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
@@ -119,7 +123,7 @@ body, html {
 }
 
 .espaciado-seguimiento {
-    margin-top: 11rem;
+    margin-top: 13rem;
 }
 
 .carta-titulo-portada {
@@ -168,6 +172,10 @@ body, html {
         padding-top: 0.25rem;
         width: 29rem;
         height: 12rem;
+    }
+    
+    .espaciado-seguimiento {
+        margin-top: 12rem;
     }
 }
 @media only screen and (max-width: 800px) {
