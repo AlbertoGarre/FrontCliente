@@ -14,8 +14,8 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) =
             <div className="center imagenDeFondo2 row justify-content-center px-0 mx-0" style={{ top: "5rem", width: '100%' }}>
                 <div className="col-12 col-md-7 mx-auto px-0 justify-content-center text-center espaciado-titulo mt-6">
                     <div className="rounded cristal mx-auto px-0 carta-titulo-portada border border-dark shadow" style={{ backgroundColor: "#ffffff70"}}>
-                        <h1 className="mb-5 display-3 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}><strong>CONTOSOX</strong></h1>
-                        <h4 className="mb-5 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}>SIEMPRE LLEGAMOS A TIEMPO</h4>
+                        <h1 className="mb-5 display-3 text-light sombra-negra"><strong>CONTOSOX</strong></h1>
+                        <h4 className="mb-5 text-light sombra-negra">SIEMPRE LLEGAMOS A TIEMPO</h4>
                     </div>
                 </div>
                 <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />
@@ -55,7 +55,7 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) =
                         <h4 style={{ color: "grey" }} className="mb-5">Nuestros servicios</h4>
                     </div>
                     <div className="col-lg-3 col-sm-6 mb-4">
-                        <div className="card border-0 shadow ">
+                        <div className="card shadow ">
                             <div className="card-body"> <i className="fas fa-cube h1 display-4 text-success  mb-3"></i>
                                 <h4 className="mt-4 mb-3">Calidad con total entrega</h4>
                                 <p>CONTOSOX es una compañía líder en el segmento de la mensajería exprés en España, Andorra y Portugal.
@@ -64,7 +64,7 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) =
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 mb-4">
-                        <div className="card border-0 shadow ">
+                        <div className="card shadow ">
                             <div className="card-body"> <i className="fa fa-users h1 display-4 text-success mb-3"></i>
                                 <h4 className="mt-4 mb-3">Nuestro objetivo: tu satisfacción</h4>
                                 <p>Nuestro objetivo es desarrollar servicios que cumplan con las expectativas de nuestros clientes. </p>
@@ -73,7 +73,7 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) =
                     </div>
 
                     <div className="col-lg-3 col-sm-6 mb-4">
-                        <div className="card border-0 shadow ">
+                        <div className="card shadow ">
                             <div className="card-body"> <i className="fas fa-shuttle-van h1 display-4 text-success  mb-3"></i>
                                 <h4 className="mt-4 mb-3">Más que un transporte</h4>
                                 <p>Ofrecemos una amplia gama de servicios nacionales, internacionales y de valor añadido.</p>
@@ -81,7 +81,7 @@ const Portada = ({ codigoSeguimiento, setCodigoSeguimiento, setPaginaActual }) =
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 mb-4">
-                        <div className="card border-0 shadow ">
+                        <div className="card shadow ">
                             <div className="card-body"> <i className="fa fa-search-plus h1 display-4 text-success  mb-3"></i>
                                 <h4 className="mt-4 mb-3">Más información</h4>
                                 &nbsp;

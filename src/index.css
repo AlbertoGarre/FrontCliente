@@ -46,6 +46,14 @@ Si no
 
 /*estilo de la imagen de fondo*/
 
+.sombra-negra {
+    text-shadow: 2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000;
+}
+
+.sombra-blanca {
+    text-shadow: 0px 0px 8px #fff, 0px 0px 16px #fff, 0px 0px 16px #fff;
+}
+
 .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
     margin-bottom: .5rem;
     font-weight: 350;
