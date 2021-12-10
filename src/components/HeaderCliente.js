@@ -15,19 +15,22 @@ const HeaderCliente = ({ title, onAdd, showAdd, paginaActual }) => {
 
     return (
         <nav id="header" className="cristal navbar navbar-expand-md text-dark fixed-top navbar-light border-bottom border-secondary">
-            <Link className="navbar-brand mr-5 text-success" to="/"><i className="fab fa-contao display-4"></i></Link>
-            <Link className={"h5 nav-item mr-5 mr-md-4 nav-link bg-transparent pb-2 sombra-blanca" + (paginaActual == "/NuevoEnvio" ? " text-success border-bottom border-success" : " text-dark")}  to="/NuevoEnvio">Enviar</Link>
+            <Link className="navbar-brand mr-2 text-success" to="/"><i className="fab fa-contao display-4"></i></Link>
+            <Link className={"h3 nav-item mr-1 mr-md-2 nav-link bg-transparent pb-2 sombra-blanca texto-verde"} to="/">CONTOSOX</Link>
             <button className="border-dark navbar-toggler" onClick={accionaNav} type="button" data-toggle="collapse" data-target="#navbarsExample03">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <ul className={"navbar-collapse navbar-nav mr-auto " + (menuColapsado ? "collapse" : "")} id="navbarsExample03">
-                <li className="nav-item mr-0 mr-md-4">
+                <li className="nav-item mr-0 mr-md-2">
+                    <Link className={"h5 nav-link sombra-blanca" + (paginaActual == "/NuevoEnvio" ? " text-success border-bottom border-success" : " text-dark")} to="/NuevoEnvio">Envia <span className="sr-only">(current)</span></Link>
+                </li>
+                <li className="nav-item mr-0 mr-md-2">
                     <Link className={"h5 nav-link sombra-blanca" + (paginaActual == "/Seguimiento" ? " text-success border-bottom border-success" : " text-dark")} to="/Seguimiento">Seguimiento <span className="sr-only">(current)</span></Link>
                 </li>
-                <li className="nav-item mr-0 mr-md-4">
+                <li className="nav-item mr-0 mr-md-2">
                     <Link className={"h5 nav-link sombra-blanca" + (paginaActual == "/Tarifas" ? " text-success border-bottom border-success" : " text-dark")} to="/Tarifas">Tarifas</Link>
                 </li>
-                <li className="nav-item mr-0 mr-md-4 dropdown">
+                <li className="nav-item mr-0 mr-md-2 dropdown">
                     <Link className={"h5 nav-link sombra-blanca dropdown-toggle ml-2 ml-md-0" + (paginaActual == "/Empresa" ? " text-success border-bottom border-success" : " text-dark")} to="#" id="dropdown03" data-toggle="dropdown">Empresa</Link>
                     <div className="dropdown-menu">
                         <Link className={"h5 dropdown-item sombra-blanca" + (paginaActual == "/Soluciones" ? " text-success border-bottom border-success" : " text-dark")} to="#">Soluciones logísticas</Link>
@@ -36,7 +39,7 @@ const HeaderCliente = ({ title, onAdd, showAdd, paginaActual }) => {
                         <Link className={"h5 dropdown-item sombra-blanca" + (paginaActual == "/TrabajaConNosotros" ? " text-success border-bottom border-success" : " text-dark")} to="#">Trabaja con nosotros</Link>
                     </div>
                 </li>
-                <li className="ml-md-auto mx-md-3 my-3 my-md-0 nav-item">
+                <li className="ml-md-auto mx-md-2 my-3 my-md-0 nav-item">
                     <Link className={"h5 sombra-blanca my-md-2 my-md-0" + (paginaActual == "/Acceso" ? " text-success border-bottom border-success" : " text-dark")} to="/Acceso">Usuarios</Link>
                 </li>
             </ul>
