@@ -1,16 +1,25 @@
 import { Link } from 'react-router-dom'
 import CodigoSeguimiento from './CodigoSeguimiento'
 
-const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
+const Portada = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
     return (
 
         /*Contenido de la página*/
-        <div id="content" className=" m-0 p-4" style={{width: '100%'}}>
+        <div id="content" className=" m-0 p-4" style={{ width: '100%' }}>
             <br />
             <br />
-            <div className="center imagenDeFondo2" style={{width: '100%'}}>
-                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento}/>
+            <div className="center imagenDeFondo2 row  justify-content-start mx-0" style={{ top: "5rem", width: '100%' }}>
+                <div className="col-md-7 ml-md-5 text-center espaciado-titulo mt-6 ml-1 ml-md-0 p-0 pl-md-5">
+                    <div className="ml-md-5 p-0 rounded" style={{ backgroundColor: "#000000c0", width: "25rem", height: "11rem" }}>
+                        <h1 className="mb-5 display-3 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}><strong>CONTOSOX</strong></h1>
+                        <h4 className="mb-5 text-light" style={{ textShadow: "2px 2px 8px #000000, 2px 2px 16px #000000, 2px 2px 32px #000000" }}>SIEMPRE LLEGAMOS A TIEMPO</h4>
+                    </div>
+                </div>
+                <CodigoSeguimiento codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />
             </div>
+            <br />
+            <br />
+            <br />
             <br />
             <br />
             <br />
@@ -39,8 +48,8 @@ const Portada = ({codigoSeguimiento, setCodigoSeguimiento}) => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
-                        <p  style={{color: "grey" }} className="subtitle">Nuestros servicios</p>
-                        <h2 style={{color: "grey" }} className="mb-5">SIEMPRE LLEGAMOS A TIEMPO</h2>
+                        <br />
+                        <h4 style={{ color: "grey" }} className="mb-5">Nuestros servicios</h4>
                     </div>
                     <div className="col-lg-3 col-sm-6 mb-4">
                         <div className="card border-0 shadow ">

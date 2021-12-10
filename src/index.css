@@ -40,7 +40,7 @@ Si no
 @supports not ((-webkit-backdrop-filter:saturate(180%) blur(20px)) or (backdrop-filter:saturate(180%) blur(20px)))
 {
     .cristal{
-        background-color:#fff
+        background-color:#fffe
     }
 }
 
@@ -69,13 +69,59 @@ body, html {
     background-size: cover;
 }
 
+.imagenDeFondo2 {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    
+    width: 100%;
+
+    /* The image used */
+    background-image: url("./transporte.png");
+    background-size: 100% 120%;
+    
+    -webkit-filter: saturate(100%);
+    -moz-filter:    saturate(100%);
+    -o-filter:      saturate(100%);
+    -ms-filter:     saturate(100%);
+    filter:         saturate(100%);
+  
+    /* Half height */
+    height: 40rem;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
   /*----------------------------------------*/
   /*Estilos de tarjetas*/
 
-.espaciado {
-    margin-top: 160px
+.espaciado-titulo {
+    margin-top: 12rem;
 }
 
+.espaciado-seguimiento {
+    margin-top: 13rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    /*
+    [class*="espaciado-"] {
+        margin-top: 0%;
+    }
+    */
+    .espaciado-titulo {
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+    }
+
+    .espaciado-seguimiento {
+        margin-top: 0rem;
+    }
+  }
 .shadow {
     box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important
 }

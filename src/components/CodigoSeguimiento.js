@@ -12,8 +12,8 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
     }, []);
 
     return (
-        <div className="cristal rounded mx-auto px-3" style={{ width: "20rem" }}>
-            <div className="espaciado py-2">
+        <div className="cristal rounded mx-auto px-1 py-1 shadow espaciado-seguimiento" style={{top: "6rem", width: "18rem", height: "8rem" }}>
+            <div className="py-2 mx-2">
 
                 <form className="form-inline border-secondary "
                     method="post"
@@ -28,7 +28,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                     }}>
                     <h2 className="intro text-center mx-auto mt-1 mb-3">Sige tu envio</h2>
                     <div className="form-group mx-auto input-group pb-2">
-                        <input className="form-control border-secondary rounded-left" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento" placeholder="Número de seguimiento" />
+                        <input className="form-control border-secondary rounded-left mx-auto" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento" placeholder="Número de seguimiento" />
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary border border-secondary text-dark " type="submit"><i class="fas fa-search"></i></button>
                         </div>
