@@ -12,6 +12,7 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => 
 
     return (
         <div id="content" className="m-0 p-4 ">
+            <br/><br/>
             <h2 className="w-auto text-center py-5 mt-3 display-4">Solicita Recogida</h2>
             <div className="row d-flex justify-content-center">
                 <div className="col-sm-8">
