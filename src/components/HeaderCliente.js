@@ -16,7 +16,7 @@ const HeaderCliente = ({ title, onAdd, showAdd, paginaActual }) => {
     return (
         <nav id="header" className="cristal navbar navbar-expand-md text-dark fixed-top navbar-light border-bottom border-secondary">
             <Link className="navbar-brand mr-2 text-success" to="/"><i className="fab fa-contao display-4"></i></Link>
-            <a className={"h3 nav-item mr-1 mr-md-2 nav-link bg-transparent pb-2 sombra-blanca texto-verde"} >CONTOSOX</a>
+            <Link className={"h3 nav-item mr-1 mr-md-2 nav-link bg-transparent pb-2 sombra-blanca texto-verde"} to="/">CONTOSOX</Link>
             <button className="border-dark navbar-toggler" onClick={accionaNav} type="button" data-toggle="collapse" data-target="#navbarsExample03">
                 <span className="navbar-toggler-icon"></span>
             </button>
