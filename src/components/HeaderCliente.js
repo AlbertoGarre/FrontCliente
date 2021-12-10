@@ -16,18 +16,18 @@ const HeaderCliente = ({ title, onAdd, showAdd, paginaActual }) => {
     return (
         <nav id="header" className="cristal navbar navbar-expand-md text-dark fixed-top navbar-light">
             <Link className="navbar-brand mr-5 text-success" to="/"><i className="fab fa-contao display-4"></i></Link>
-            <Link className={"h5 nav-item mr-4 nav-link bg-transparent pb-2" + (paginaActual == "/NuevoEnvio" ? " text-success border-bottom border-success" : " text-dark")} to="/NuevoEnvio">Enviar</Link>
+            <Link className={"h5 nav-item mr-5 mr-md-4 nav-link bg-transparent pb-2" + (paginaActual == "/NuevoEnvio" ? " text-success border-bottom border-success" : " text-dark")} to="/NuevoEnvio">Enviar</Link>
             <button className="border-dark navbar-toggler" onClick={accionaNav} type="button" data-toggle="collapse" data-target="#navbarsExample03">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <ul className={"navbar-collapse navbar-nav mr-auto " + (menuColapsado ? "collapse" : "")} id="navbarsExample03">
-                <li className="nav-item mr-4">
+                <li className="nav-item mr-0 mr-md-4">
                     <Link className={"h5 nav-link" + (paginaActual == "/Seguimiento" ? " text-success border-bottom border-success" : " text-dark")} to="/Seguimiento">Seguimiento <span className="sr-only">(current)</span></Link>
                 </li>
-                <li className="nav-item mr-4">
+                <li className="nav-item mr-0 mr-md-4">
                     <Link className={"h5 nav-link" + (paginaActual == "/Tarifas" ? " text-success border-bottom border-success" : " text-dark")} to="/Tarifas">Tarifas</Link>
                 </li>
-                <li className="nav-item mr-4 dropdown">
+                <li className="nav-item mr-0 mr-md-4 dropdown">
                     <Link className={"h5 nav-link dropdown-toggle ml-2 ml-md-0" + (paginaActual == "/Empresa" ? " text-success border-bottom border-success" : " text-dark")} to="#" id="dropdown03" data-toggle="dropdown">Empresa</Link>
                     <div className="dropdown-menu">
                         <Link className={"h5 dropdown-item" + (paginaActual == "/Soluciones" ? " text-success border-bottom border-success" : " text-dark")} to="#">Soluciones logísticas</Link>
