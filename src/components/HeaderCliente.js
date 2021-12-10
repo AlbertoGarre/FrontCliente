@@ -14,7 +14,7 @@ const HeaderCliente = ({ title, onAdd, showAdd, paginaActual }) => {
     }
 
     return (
-        <nav id="header" className="cristal navbar navbar-expand-md text-dark fixed-top navbar-light">
+        <nav id="header" className="cristal navbar navbar-expand-md text-dark fixed-top navbar-light border-bottom border-secondary">
             <Link className="navbar-brand mr-5 text-success" to="/"><i className="fab fa-contao display-4"></i></Link>
             <Link className={"h5 nav-item mr-5 mr-md-4 nav-link bg-transparent pb-2 sombra-blanca" + (paginaActual == "/NuevoEnvio" ? " text-success border-bottom border-success" : " text-dark")}  to="/NuevoEnvio">Enviar</Link>
             <button className="border-dark navbar-toggler" onClick={accionaNav} type="button" data-toggle="collapse" data-target="#navbarsExample03">
