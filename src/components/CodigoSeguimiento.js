@@ -6,11 +6,7 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
     const navigate = useNavigate();
 
     React.useEffect(() => {
-        console.log()
-        if (codigoSeguimiento == '') {
-            console.log("hola")
-        }
-        else {
+        if (codigoSeguimiento != '') {
             document.getElementById("entradaCodigoSeguimiento").value = codigoSeguimiento
         }
     }, []);
