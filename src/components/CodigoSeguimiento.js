@@ -23,7 +23,10 @@ const CodigoSeguimiento = ({ codigoSeguimiento, setCodigoSeguimiento }) => {
                         }}>
                     <div className="form-group mr-2 ">
                         <input className="form-control cristal" id="entradaCodigoSeguimiento" type="text" name="inputNumSeguimiento"
-                            placeholder={codigoSeguimiento == '' ? "Número de seguimiento " : codigoSeguimiento} />
+                            placeholder={codigoSeguimiento == '' ? "Número de seguimiento" : codigoSeguimiento}
+                            onLoad={
+                                (codigoSeguimiento == '') ? ()=>{} : ()=>{document.getElementById("entradaCodigoSeguimiento").value = codigoSeguimiento}
+                            }/>
                     </div>
                     <div className="form-group ">
                         <button
