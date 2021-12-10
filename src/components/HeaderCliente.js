@@ -31,14 +31,14 @@ const HeaderCliente = ({ title, onAdd, showAdd }) => {
                     <Link className="nav-link " to="/Tarifas">Tarifas</Link>
                 </li>
                 <li className="nav-item dropdown">
-                    <Link className="nav-link dropdown-toggle" to="#" id="dropdown03" data-toggle="dropdown">Empresa</Link>
+                    <Link className="nav-link dropdown-toggle ml-2 ml-md-0" to="#" id="dropdown03" data-toggle="dropdown">Empresa</Link>
                     <div className="dropdown-menu">
                         <Link className="dropdown-item" to="#">Quienes somos</Link>
                         <Link className="dropdown-item" to="#">Servicios</Link>
                         <Link className="dropdown-item" to="#">Trabaja con nosotros</Link>
                     </div>
                 </li>
-                <li className="ml-md-auto nav-item">
+                <li className="ml-md-auto mx-md-3 nav-item">
                     <Link className="my-2 my-md-0 text-dark" to="/Acceso">Usuarios</Link>
                 </li>
             </ul>
