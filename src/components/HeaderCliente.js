@@ -37,7 +37,7 @@ const HeaderCliente = ({ title, onAdd, showAdd, paginaActual }) => {
                     </div>
                 </li>
                 <li className="ml-md-auto mx-md-3 my-3 my-md-0 nav-item">
-                    <Link className={"h5 my-md-2 my-md-0" + (paginaActual == "/NuevoEnvio" ? " text-success border-bottom border-success" : " text-dark")} to="/Acceso">Usuarios</Link>
+                    <Link className={"h5 my-md-2 my-md-0" + (paginaActual == "/Acceso" ? " text-success border-bottom border-success" : " text-dark")} to="/Acceso">Usuarios</Link>
                 </li>
             </ul>
         </nav>

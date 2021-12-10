@@ -66,7 +66,7 @@ const App = () => {
                 <Route path='/NuevoEnvio' element={<NuevoEnvio setPaginaActual={setPaginaActual} pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
                 <Route path='/Seguimiento' element={<Seguimiento setPaginaActual={setPaginaActual} codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
 
-                <Route path='/Acceso' element={<Acceso />} />
+                <Route path='/Acceso' element={<Acceso setPaginaActual={setPaginaActual} />} />
                 <Route path='/InicioEmpleado' element={<InicioEmpleado />} />
                 <Route path='/InicioAdmin' element={<InicioAdmin />} />
                 <Route path='/TareasFinalizadas' element={<TareasFinalizadas />} />

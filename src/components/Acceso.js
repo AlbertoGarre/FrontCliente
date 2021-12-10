@@ -1,5 +1,7 @@
-const Acceso = () => {
-    
+const Acceso = ({setPaginaActual}) => {
+
+    setPaginaActual("/Acceso")
+
     return (
         <div id="content" className=" m-0 p-4" style={{ width: "100%" }}>
             <br />
