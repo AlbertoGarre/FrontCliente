@@ -9,10 +9,10 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
     }
 
     return (
-        <div id="content" className="container m-0 p-4 ">
+        <div id="content" className="m-0 p-4 ">
             <h2 className="w-auto text-center py-5 mt-3">Solicita Recogida</h2>
-            <div className="row">
-                <div className="col-md-8 order-md-1">
+            <div className="row d-flex justify-content-center">
+                <div className="col-sm-8">
                     <form id='formularioNuevoEnvio'>
                         <h3>Datos generales</h3>
                         <div className="form-row m-0 p-0">
@@ -31,9 +31,6 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
                                 <input type="text" className="form-control m-0 p-0" id="inputTelefono"
                                     placeholder="968 82 60 47" />
                             </div>
-                        </div>
-
-                        <div className="form-row m-0 p-0 mt-2">
                             <div className="form-group col-md-2 m-0 p-0" >
                                 <label htmlFor=" inputNIF">NIF</label>
                                 <input type="text" className="form-control m-0 p-0" id="inputNIF" placeholder="48000000Z" />
@@ -85,12 +82,12 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
                                 <input type="text" className="form-control m-0 p-0" id="inputPoblación"
                                     placeholder="Población" />
                             </div>
-                        </div>
 
-                        <div className="form-group col-md-6 m-0 p-0">
-                            <label htmlFor="inputDireccion"></label>
-                            <input type="text" className="form-control m-0 p-0" id="inputCP"
-                                placeholder="Dirección: nombre, via, número, piso" />
+                            <div className="form-group col-md-6 m-0 p-0">
+                                <label htmlFor="inputCP"></label>
+                                <input type="text" className="form-control m-0 p-0" id="inputCP"
+                                    placeholder="Dirección: nombre, via, número, piso" />
+                            </div>
                         </div>
 
                         <div className="form-row m-0 p-0 ">
@@ -141,12 +138,12 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
                                 <input type="text" className="form-control m-0 p-0" id="inputPoblación"
                                     placeholder="Población" />
                             </div>
-                        </div>
 
-                        <div className="form-group col-md-6 m-0 p-0">
-                            <label htmlFor="inputDireccion"></label>
-                            <input type="text" className="form-control m-0 p-0" id="inputCP"
-                                placeholder="Dirección: nombre, via, número, piso" />
+                            <div className="form-group col-md-6 m-0 p-0">
+                                <label htmlFor="inputDireccion"></label>
+                                <input type="text" className="form-control m-0 p-0" id="inputCP"
+                                    placeholder="Dirección: nombre, via, número, piso" />
+                            </div>
                         </div>
 
                         <div className="form-row m-0 p-0">
@@ -201,11 +198,12 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada }) => {
                             campo obligatorio
                         </label>
                     </div>
-
                 </div>
-                <div className="form-row m-0 p-0 ">
-                    <button type="submit" className="btn btn-success col-md-4 m-0 p-2 px-4 bg-success">Enviar</button>
+                <br/>
+                <div className="form-row m-0 p-0 d-flex justify-content-center">
+                    <button type="submit" className="btn btn-success col-md-6 m-0 p-3 px-6 bg-success">CONTRATA</button>
                 </div>
+                <br/>
             </div>
 
         </div>
