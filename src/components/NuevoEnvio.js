@@ -2,7 +2,7 @@ import React from 'react'
 import TarjetaTarifa from './TarjetaTarifa'
 import { Link } from 'react-router-dom';
 
-const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => {
+const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaActual }) => {
 
     setPaginaActual("/NuevoEnvio")
     
@@ -222,7 +222,7 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => 
                         <TarjetaTarifa
                             seleccionada={tarifaSeleccionada == tarifa.id}
                             tarifa={tarifa}
-                            pulsa={pulsa} />
+                            seleccionaTarifa={seleccionaTarifa} />
                     ))}
                 </div>
 

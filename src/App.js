@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import HeaderCliente from './components/HeaderCliente'
@@ -47,11 +47,12 @@ const App = () => {
 
     const [tarifaSeleccionada, setTarifaSeleccionada] = useState(0)
 
-    const pulsa = (id) => {
+    
+    //establece que tarifa vamos a contratar
+    //es un estado que se guarda en FRONTEND, no en el servidor
+    const seleccionaTarifa = (id) => {
         //establece el valor del nuevo estado
         setTarifaSeleccionada(id)
-        //console.log
-        console.log("Tarifa seleccionada: ", tarifaSeleccionada)
     }
 
     ////////////////////////////TARIFAS////////////////////////////////////////////////////////
@@ -77,8 +78,8 @@ const App = () => {
             <Routes>
 
                 <Route path='/' element={<Portada setPaginaActual={setPaginaActual} codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
-                <Route path='/Tarifas' element={<Tarifas setPaginaActual={setPaginaActual} pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
-                <Route path='/NuevoEnvio' element={<NuevoEnvio setPaginaActual={setPaginaActual} pulsa={pulsa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
+                <Route path='/Tarifas' element={<Tarifas setPaginaActual={setPaginaActual} seleccionaTarifa={seleccionaTarifa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
+                <Route path='/NuevoEnvio' element={<NuevoEnvio setPaginaActual={setPaginaActual} seleccionaTarifa={seleccionaTarifa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
                 <Route path='/Seguimiento' element={<Seguimiento setPaginaActual={setPaginaActual} codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
 
                 <Route path='/Acceso' element={<Acceso setPaginaActual={setPaginaActual} />} />
