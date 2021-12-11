@@ -88,7 +88,7 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                                 e_observaciones: document.getElementById("e_Observaciones").value,
                                 //tarifas
                                 tarifa: tarifaSeleccionada,
-                                //politicaprivacidad:{ document.getElementById("gridCheck").checked ?true: false}
+                                
                             }
                             añadePaquete(paquete)
                             navigate("/")
