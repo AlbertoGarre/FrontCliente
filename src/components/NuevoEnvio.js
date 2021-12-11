@@ -220,7 +220,7 @@ const NuevoEnvio = ({ tarifas, pulsa, tarifaSeleccionada, setPaginaActual }) => 
                 <div className="card-deck mb-3 text-center">
                     {tarifas.map((tarifa) => (
                         <TarjetaTarifa
-                            seleccionada={tarifaSeleccionada == tarifa.key}
+                            seleccionada={tarifaSeleccionada == tarifa.id}
                             tarifa={tarifa}
                             pulsa={pulsa} />
                     ))}
