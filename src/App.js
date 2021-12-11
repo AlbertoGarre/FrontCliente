@@ -24,26 +24,7 @@ const App = () => {
 
     const [paginaActual, setPaginaActual] = useState("/")
 
-    const [tarifas, setTarifas] = useState([
-        {
-            id: 1,
-            titulo: "Económica",
-            Precio: "5 €",
-            Cualidades: ["Hasta 1 kg de peso", "Volumen inferior a 30x20x10 cm", "Entrega antes de 48 horas", "El mejor servicio"],
-        },
-        {
-            id: 2,
-            titulo: "Hogar",
-            Precio: "15 €",
-            Cualidades: ["Hasta 7 kg de peso", "Volumen inferior a 50x50x50 cm", "Entrega antes de 48 horas", "El mejor servicio"],
-        },
-        {
-            id: 3,
-            titulo: "Profesional",
-            Precio: "50 €",
-            Cualidades: ["Hasta 25 kg de peso", "Volumen transportable por un operario", "Entrega antes de 48 horas", "El mejor servicio"],
-        },
-    ])
+    const [tarifas, setTarifas] = useState([])
 
     const [tarifaSeleccionada, setTarifaSeleccionada] = useState(0)
 
@@ -54,6 +35,26 @@ const App = () => {
         //establece el valor del nuevo estado
         setTarifaSeleccionada(id)
     }
+
+////////////////////////////USUARIOS////////////////////////////////////////////////////////
+
+    //POST
+    // crear usuario
+    const añadePaquete = async (paquete) => {
+        const res = await fetch('http://localhost:5000/paquetes', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(paquete),
+        })
+        fetchUsuarios()
+    }
+
+
+
+
+
 
     ////////////////////////////TARIFAS////////////////////////////////////////////////////////
     //GET
@@ -79,7 +80,7 @@ const App = () => {
 
                 <Route path='/' element={<Portada setPaginaActual={setPaginaActual} codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
                 <Route path='/Tarifas' element={<Tarifas setPaginaActual={setPaginaActual} seleccionaTarifa={seleccionaTarifa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
-                <Route path='/NuevoEnvio' element={<NuevoEnvio setPaginaActual={setPaginaActual} seleccionaTarifa={seleccionaTarifa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} />} />
+                <Route path='/NuevoEnvio' element={<NuevoEnvio setPaginaActual={setPaginaActual} seleccionaTarifa={seleccionaTarifa} tarifas={tarifas} tarifaSeleccionada={tarifaSeleccionada} añadePaquete={añadePaquete}/>} />
                 <Route path='/Seguimiento' element={<Seguimiento setPaginaActual={setPaginaActual} codigoSeguimiento={codigoSeguimiento} setCodigoSeguimiento={setCodigoSeguimiento} />} />
 
                 <Route path='/Acceso' element={<Acceso setPaginaActual={setPaginaActual} />} />

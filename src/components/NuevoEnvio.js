@@ -2,7 +2,7 @@ import React from 'react'
 import TarjetaTarifa from './TarjetaTarifa'
 import { Link } from 'react-router-dom';
 
-const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaActual }) => {
+const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaActual, añadePaquete}) => {
 
     setPaginaActual("/NuevoEnvio")
     
