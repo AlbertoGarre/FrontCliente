@@ -20,6 +20,8 @@ import PoliticaPrivacidad from './components/PoliticaPrivacidad'
 
 
 const App = () => {
+
+    const servidor = "192.168.1.47"
     const [codigoSeguimiento, setCodigoSeguimiento] = useState('')
 
     const [paginaActual, setPaginaActual] = useState("/")
@@ -41,14 +43,13 @@ const App = () => {
     //POST
     // crear usuario
     const añadePaquete = async (paquete) => {
-        const res = await fetch('http://localhost:5000/paquetes', {
+        const res = await fetch(`http://${servidor}:5000/paquetes`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify(paquete),
         })
-        fetchUsuarios()
     }
 
 
@@ -60,7 +61,7 @@ const App = () => {
     //GET
     //fetch Tarifas
     const fetchTarifas = async () => {
-        const res = await fetch('http://localhost:5000/tarifas')
+        const res = await fetch(`http://${servidor}:5000/tarifas`)
         const data = await res.json()
         //peticion GET de forma predeterminada
         setTarifas(data)

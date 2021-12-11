@@ -1,22 +1,45 @@
 import React from 'react'
 import TarjetaTarifa from './TarjetaTarifa'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaActual, añadePaquete}) => {
+const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaActual, añadePaquete }) => {
 
     setPaginaActual("/NuevoEnvio")
-    
+
+    const navigate = useNavigate();
     const limpia = () => {
         document.getElementById("formularioNuevoEnvio").reset()
     }
 
     return (
         <div id="content" className="m-0 p-4 ">
-            <br/><br/>
+            <br /><br />
             <h2 className="w-auto text-center py-5 mt-3 display-4">Solicita Recogida</h2>
             <div className="row d-flex justify-content-center">
                 <div className="col-sm-8">
-                    <form id='formularioNuevoEnvio'>
+                    <form 
+                        id='formularioNuevoEnvio'
+                        onSubmit={(e) => {
+                            e.preventDefault()
+                            const paquete = {
+                                id: (paquete != 0 ? paquete.id : null),
+                                paquete: (paquete != 0 ? paquete.paquete : document.getElementById("nombre").value.substring(0, 2) + document.getElementById("apellidos").value.substring(0, 2)),
+                                franquicia: (paquete != 0 ? paquete.franquicia : 1),
+                                nombre: document.getElementById("nombre").value,
+                                apellidos: document.getElementById("apellidos").value,
+                                email: document.getElementById("email").value,
+                                telefono: document.getElementById("telefono").value,
+                                contraseña: document.getElementById("clave").value,
+                                roles: []
+                            }
+                            navigate("/")
+                            return false
+                        }}
+                    >
+
+
+                    
                         <h3>Datos generales</h3>
                         <div className="form-row m-0 p-0">
                             <div className="form-group m-0 p-0 mr-2">
@@ -208,42 +231,42 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                                 placeholder="Observaciones de la entrega" />
                         </div>
                         <a href="#" onClick={limpia} className="text-success">Limpiar campos</a>
+
+
+                        <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                            <h3 className="display-4">Tarifas</h3>
+                        </div>
+
+                        <div className="container">
+                            <div className="card-deck mb-3 text-center">
+                                {tarifas.map((tarifa) => (
+                                    <TarjetaTarifa
+                                        seleccionada={tarifaSeleccionada == tarifa.id}
+                                        tarifa={tarifa}
+                                        seleccionaTarifa={seleccionaTarifa} />
+                                ))}
+                            </div>
+
+                            <div className="form-group m-0 px-5 pt-4 pb-5">
+                                <div className="form-check m-0 p-0">
+                                    <input className="form-check-input m-0 p-0 mt-2" type="checkbox" id="gridCheck" />
+                                    <label className="form-check-label m-0 pl-4 h5" htmlFor="gridCheck">
+                                        He leido y acepto <Link to='/PoliticaPrivacidad' className="text-success">la política de privacidad y
+                                            condiciones de uso de la web</Link>
+                                    </label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <small>* campo obligatorio</small>
+                                </div>
+                            </div>
+                            <br />
+                            <div className="form-row m-0 p-0 d-flex justify-content-center">
+                                <button type="submit" className="btn btn-success col-md-6 m-0 p-3 px-6 bg-success">CONTRATA</button>
+                            </div>
+                            <br />
+                        </div>
                     </form>
                 </div>
             </div>
-
-            <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h3 className="display-4">Tarifas</h3>
-            </div>
-
-            <div className="container">
-                <div className="card-deck mb-3 text-center">
-                    {tarifas.map((tarifa) => (
-                        <TarjetaTarifa
-                            seleccionada={tarifaSeleccionada == tarifa.id}
-                            tarifa={tarifa}
-                            seleccionaTarifa={seleccionaTarifa} />
-                    ))}
-                </div>
-
-                <div className="form-group m-0 px-5 pt-4 pb-5">
-                    <div className="form-check m-0 p-0">
-                        <input className="form-check-input m-0 p-0 mt-2" type="checkbox" id="gridCheck" />
-                        <label className="form-check-label m-0 pl-4 h5" htmlFor="gridCheck">
-                            He leido y acepto <Link to='/PoliticaPrivacidad' className="text-success">la política de privacidad y
-                            condiciones de uso de la web</Link>
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <small>* campo obligatorio</small>
-                    </div>
-                </div>
-                <br/>
-                <div className="form-row m-0 p-0 d-flex justify-content-center">
-                    <button type="submit" className="btn btn-success col-md-6 m-0 p-3 px-6 bg-success">CONTRATA</button>
-                </div>
-                <br/>
-            </div>
-
         </div>
     )
 }
