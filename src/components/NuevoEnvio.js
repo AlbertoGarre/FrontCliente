@@ -36,7 +36,7 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                             if ( document.getElementById("r_Atencion").value == '') {alert("Empresa/Persona de recogida está vacío"); return false}
                             if ( document.getElementById("r_Telefono").value == '') {alert("El teléfono de recogida está vacío"); return false}
                             if ( document.getElementById("r_NombreAtencion").value == '') {alert("\"A la Atención de\" de recogida está vacío"); return false}
-                            if ( document.getElementById("r_Observaciones").value == '') {alert("Las observaciones de recogida están vacías"); return false}
+                            
                             //Datos entrega
                             if ( document.getElementById("e_Pais").value == '') {alert("El país de entrega está vacío"); return false}
                             if ( document.getElementById("e_CP").value == '') {alert("El código postal de entrega está vacío"); return false}
@@ -50,7 +50,7 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                             if ( document.getElementById("e_Destinatario").value == '') {alert("El destinatario de entrega está vacío"); return false}
                             if ( document.getElementById("e_Telefono").value == '') {alert("El teléfono de entrega está vacío"); return false}
                             if ( document.getElementById("e_NombreAtencion").value == '') {alert("\"A la Atención de\" de entrega está vacío"); return false}
-                            if ( document.getElementById("e_Observaciones").value == '') {alert("Las observaciones de entrega están vacías"); return false}
+                            
                             //tarifas
                             if (tarifaSeleccionada == 0) {alert("No ha seleccionado la tarifa"); return false}
                             if(! document.getElementById("gridCheck").checked ){alert("No has aceptado la política de privacidad"); return false}
