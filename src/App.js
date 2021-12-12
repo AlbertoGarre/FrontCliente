@@ -21,7 +21,7 @@ import PoliticaPrivacidad from './components/PoliticaPrivacidad'
 
 const App = () => {
 
-    const servidor = "192.168.1.47"
+    const servidor = "localhost"
     const [codigoSeguimiento, setCodigoSeguimiento] = useState('')
 
     const [paginaActual, setPaginaActual] = useState("/")
@@ -61,10 +61,10 @@ const App = () => {
     //GET
     //fetch Tarifas
     const fetchTarifas = async () => {
-        const res = await fetch(`http://${servidor}:5000/tarifas`)
+        const res = await fetch(`http://${servidor}:8000/api/tarifas`)
         const data = await res.json()
         //peticion GET de forma predeterminada
-        setTarifas(data)
+        setTarifas(data.tarifas)
     }
 
     useEffect(() => {
