@@ -33,7 +33,8 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                             if ( document.getElementById("r_Pais").value == '') {alert("El país de recogida está vacío"); return false}
                             if ( document.getElementById("r_CP").value == '') {alert("El código postal de recogida está vacío"); return false}
                             if ( document.getElementById("r_Poblacion").value == '') {alert("La poblacion de recogida está vacía"); return false}
-                            if ( document.getElementById("r_Atencion").value == '') {alert("Empresa/Persona de recogida está vacío"); return false}
+                            if ( document.getElementById("r_direccion").value == '') {alert("La direccíon de recogida está vacía"); return false}
+                            if ( document.getElementById("r_Atencion").value == '') {alert("La atención de recogida está vacía"); return false}
                             if ( document.getElementById("r_Telefono").value == '') {alert("El teléfono de recogida está vacío"); return false}
                             if ( document.getElementById("r_NombreAtencion").value == '') {alert("\"A la Atención de\" de recogida está vacío"); return false}
                             
@@ -50,6 +51,7 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                             if ( document.getElementById("e_Destinatario").value == '') {alert("El destinatario de entrega está vacío"); return false}
                             if ( document.getElementById("e_Telefono").value == '') {alert("El teléfono de entrega está vacío"); return false}
                             if ( document.getElementById("e_NombreAtencion").value == '') {alert("\"A la Atención de\" de entrega está vacío"); return false}
+
                             
                             //tarifas
                             if (tarifaSeleccionada == 0) {alert("No ha seleccionado la tarifa"); return false}
@@ -66,7 +68,8 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                                 //Datos recogida
                                 r_pais: document.getElementById("r_Pais").value,
                                 r_cp: document.getElementById("r_CP").value,
-                                r_poblacion: document.getElementById("r_Poblacion").value,
+                                r_poblacion: document.getElementById("r_Poblacion").value, 
+                                r_direccion:  document.getElementById("r_direccion").value,
                                 r_atencion: document.getElementById("r_Atencion").value,
                                 r_telefono: document.getElementById("r_Telefono").value,
                                 r_contacto: document.getElementById("r_NombreAtencion").value,
@@ -86,6 +89,9 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                                 e_telefono: document.getElementById("e_Telefono").value,
                                 e_atencion: document.getElementById("e_NombreAtencion").value,
                                 e_observaciones: document.getElementById("e_Observaciones").value,
+                                asignado: '',
+                                terminado: 'false',
+                                tipo_servicio: '',
                                 //tarifas
                                 tarifa: tarifaSeleccionada,
                                 
@@ -150,8 +156,8 @@ const NuevoEnvio = ({ tarifas, seleccionaTarifa, tarifaSeleccionada, setPaginaAc
                             </div>
 
                             <div className="form-group col-md-6 m-0 p-0">
-                                <label htmlFor="r_CP"></label>
-                                <input type="text" className="form-control m-0 p-0" id="r_CP"
+                                <label htmlFor="r_direccion"></label>
+                                <input type="text" className="form-control m-0 p-0" id="r_direccion"
                                     placeholder="Dirección: nombre, via, número, piso" />
                             </div>
                         </div>

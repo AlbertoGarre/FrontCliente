@@ -21,7 +21,7 @@ import PoliticaPrivacidad from './components/PoliticaPrivacidad'
 
 const App = () => {
 
-    const servidor = "localhost"
+    const servidor = "localhost:8000"
     const [codigoSeguimiento, setCodigoSeguimiento] = useState('')
 
     const [paginaActual, setPaginaActual] = useState("/")
@@ -38,34 +38,31 @@ const App = () => {
         setTarifaSeleccionada(id)
     }
 
-////////////////////////////USUARIOS////////////////////////////////////////////////////////
-
     //POST
-    // crear usuario
+    // crear paquete
     const añadePaquete = async (paquete) => {
-        const res = await fetch(`http://${servidor}:5000/paquetes`, {
+        const res = await fetch(`http://${servidor}/api/paquetes`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify(paquete),
         })
+        
     }
-
-
-
-
 
 
     ////////////////////////////TARIFAS////////////////////////////////////////////////////////
     //GET
     //fetch Tarifas
     const fetchTarifas = async () => {
-        const res = await fetch(`http://${servidor}:8000/api/tarifas`)
+        const res = await fetch(`http://${servidor}/api/tarifas`)
         const data = await res.json()
         //peticion GET de forma predeterminada
         setTarifas(data.tarifas)
     }
+
+
 
     useEffect(() => {
         fetchTarifas()
